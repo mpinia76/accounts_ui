@@ -32,7 +32,7 @@
     		<param name="value" value="site.mail" />
     		<param name="requiredMessage" value="msg:site.mail.required" />
     		<param name="placeholder" value="msg:site.mail" />
-
+			<param name="checkEmail" value="str:1" />
     		<param name="invalidEmailMessage" value="msg:site.mail.invalid" />
     	</component>
 

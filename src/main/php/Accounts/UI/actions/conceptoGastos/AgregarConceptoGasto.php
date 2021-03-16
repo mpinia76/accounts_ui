@@ -18,6 +18,8 @@ use Rasty\i18n\Locale;
 use Rasty\factory\PageFactory;
 use Rasty\exception\RastyDuplicatedException;
 
+use Accounts\UI\utils\AccountsUIUtils;
+
 
 /**
  * se realiza el alta de una ConceptoGasto.
@@ -41,6 +43,8 @@ class AgregarConceptoGasto extends Action{
 			//creamos una nueva conceptoGasto.
 			$conceptoGasto = new ConceptoGasto();
 
+			$conceptoGasto->setSite(AccountsUIUtils::getAdminSiteLogged());
+			
 			//completados con los datos del formulario.
 			$conceptoGastoForm->fillEntity($conceptoGasto);
 

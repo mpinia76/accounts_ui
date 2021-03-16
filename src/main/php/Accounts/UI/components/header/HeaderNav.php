@@ -91,10 +91,12 @@ class HeaderNav extends RastyComponent{
 				$menuGroups[] =  $menu;
 
 
+			
+
+
+		}elseif (AccountsUIUtils::isAdminSiteLogged()){
 			$menuGroups[] =  $this->getMenuAdmin() ;
 			$menuGroups[] =  $this->getMenuCuentas() ;
-
-
 		}
 
 

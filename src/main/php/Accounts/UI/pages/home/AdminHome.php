@@ -22,7 +22,7 @@ use Rasty\Grid\filter\model\UICriteria;
 
 use Rasty\Menu\menu\model\MenuGroup;
 use Rasty\Menu\menu\model\MenuOption;
-
+use Rasty\security\RastySecurityContext;
 
 
 class AdminHome extends AccountsPage{
@@ -121,8 +121,17 @@ class AdminHome extends AccountsPage{
 		$xtpl->assign("saldo_bancos", AccountsUIUtils::formatMontoToView( UIServiceFactory::getUIBancoService()->getSaldoBancos() ) );
 		$xtpl->assign("linkMovimientosBanco", $this->getLinkMovimientosBanco());
 		$xtpl->assign("menu_baproctacte",'Cta. Cte.' );
+		
+		
+		$user = RastySecurityContext::getUser();
+		
+		$uiCriteria = new UIBancoCriteria() ;
+		
+		if (AccountsUIUtils::isAdminSiteLogged()){
+			$uiCriteria->setSite(AccountsUIUtils::getAdminSiteLogged());
+		}
 
-        $bancos = UIServiceFactory::getUIBancoService()->getList( new UIBancoCriteria() );
+        $bancos = UIServiceFactory::getUIBancoService()->getList($uiCriteria );
 
         foreach ($bancos as $banco){
             $uiCriteria = new UIBancoCriteria();

@@ -20,6 +20,8 @@ use Rasty\conf\RastyConfig;
 use Cose\Security\model\Usergroup;
 use Cose\Security\model\User;
 
+use Accounts\UI\service\UIServiceFactory;
+
 
 
 /**
@@ -738,6 +740,60 @@ class AccountsUIUtils {
 
         return $user;
     }
+    
+    
+/**
+	 * registramos la sesión del admin
+	 * @param User $user
+	 */
+	public static function loginAdminSite(User $user, $site_oid) {
+
+		$appName = RastyConfig::getInstance()->getAppName();
+
+        $_SESSION [$appName]["adminSite_oid"] = $user->getOid();
+		$_SESSION [$appName]["adminSite_name"] = $user->getName();
+		$_SESSION [$appName]["adminSite_username"] = $user->getUsername();
+		$_SESSION [$appName]["adminSite_siteOid"] = $site_oid;
+
+    }
+
+    /**
+     * @return admin logueado
+     */
+    public static function getAdminSiteLogged() {
+    	
+    	$appName = RastyConfig::getInstance()->getAppName();
+
+    	$data = RastyUtils::getParamSESSION( $appName );
+    	
+    	
+    	$site = UIServiceFactory::getUISiteService()->get($data["adminSite_siteOid"]);
+    	
+
+        return $site;
+    	
+    
+    	
+    }
+
+	/**
+     * @return true si hay un admin logueado.
+     */
+    public static function isAdminSiteLogged() {
+
+    	$appName = RastyConfig::getInstance()->getAppName();
+
+    	$data = RastyUtils::getParamSESSION($appName);
+
+		$logueado =  ($data != "");
+
+		if( $logueado ){
+			$logueado = isset($data["adminSite_oid"]) && !empty($data["adminSite_oid"]);
+		}
+		return $logueado;
+    }
+
+    
 
 
     /**

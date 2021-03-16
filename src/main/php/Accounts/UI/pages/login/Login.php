@@ -47,6 +47,11 @@ class Login extends RastyPage{
 		$xtpl->assign("btn_ingresar", $this->localize( "login.ingresar" ) );
 
 		$xtpl->assign("link_registrarse", $this->localize( "login.link_registrarse" ) );
+		
+		$xtpl->assign("lbl_site", $this->localize( "login.site" ) );
+		$xtpl->assign("txt_ingrese_site", $this->localize( "login.ingrese_site" ) );
+		
+		$xtpl->assign("linkDameSite", $this->getLinkDameSite() );
 
 		//chequemos los errores.
 		$forward = $this->getForward();
@@ -68,6 +73,11 @@ class Login extends RastyPage{
 	public function setError($error)
 	{
 	    $this->error = $error;
+	}
+	
+	public function getLinkDameSite(){
+		
+		return LinkBuilder::getActionAjaxUrl( "DameSiteJson") ;
 	}
 }
 ?>

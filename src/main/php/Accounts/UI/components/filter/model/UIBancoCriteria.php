@@ -19,6 +19,8 @@ class UIBancoCriteria extends UIAccountsCriteria{
 
 
 	private $nombre;
+	
+	private $site;
 
 
 	public function __construct(){
@@ -36,6 +38,7 @@ class UIBancoCriteria extends UIAccountsCriteria{
 		$criteria = parent::buildCoreCriteria();
 
 		$criteria->setNombre( $this->getNombre() );
+		$criteria->setSite( $this->getSite() );
 		return $criteria;
 	}
 
@@ -50,5 +53,15 @@ class UIBancoCriteria extends UIAccountsCriteria{
 	public function setNombre($nombre)
 	{
 	    $this->nombre = $nombre;
+	}
+
+	public function getSite()
+	{
+	    return $this->site;
+	}
+
+	public function setSite($site)
+	{
+	    $this->site = $site;
 	}
 }

@@ -37,6 +37,17 @@ class Login extends Action{
 		try {
 
 
+			$username = RastyUtils::getParamPOST("username");
+			$password = RastyUtils::getParamPOST("password");
+			$site_oid = RastyUtils::getParamPOST("site_oid");
+			
+			if(empty($username))
+				throw new RastyException("username.required");
+			
+			if(empty($password))
+				throw new RastyException("password.required");
+			
+			
 			RastySecurityContext::login( RastyUtils::getParamPOST("username"), RastyUtils::getParamPOST("password") );
 
 
@@ -52,7 +63,7 @@ class Login extends Action{
 
 			}else{
 
-				//TODO
+				AccountsUIUtils::loginAdminSite($user,$site_oid);
 			}
 
 			/*AccountsUIUtils::login( $empleado );
@@ -60,11 +71,13 @@ class Login extends Action{
 			$caja = UIServiceFactory::getUICajaService()->getCajaAbiertaByEmpleado($empleado);
 			AccountsUIUtils::setCaja($caja);*/
 
-			if( AccountsUIUtils::isAdminLogged() )
+			/*if( AccountsUIUtils::isAdminLogged() )
 				$forward->setPageName( $this->getForwardAdmin() );
 
 			else //si no hay caja abierta, lo enviamos a abrir una nueva.
-				$forward->setPageName( $this->getForwardCaja() );
+				$forward->setPageName( $this->getForwardAdmin() );*/
+			
+			$forward->setPageName( $this->getForwardAdmin() );
 
 		} catch (RastyException $e) {
 
@@ -83,23 +96,7 @@ class Login extends Action{
 		return "AdminHome";
 	}
 
-	protected function getForwardCaja(){
-		//si hay cajas abiertas lo enviamos a seleccionar una de ellas.
-
-		if( AccountsUIUtils::isAdminLogged() )
-
-			$cajas = UIServiceFactory::getUICajaService()->getCajasAbiertas();
-
-		else
-
-			$cajas = UIServiceFactory::getUICajaService()->getCajasAbiertas( new \DateTime() );
-
-
-		if(count($cajas) > 0)
-			return "SeleccionarCaja";
-		else
-			return "AbrirCaja";
-	}
+	
 
 	protected function getErrorForward(){
 		return "Login";

@@ -1,8 +1,0 @@
-<rasty specificationClass="Rasty\Security\pages\usuarios\roles\RolConsultar" templateLocation="pages/usuarios/roles/RolConsultar.htm"> 
-
-	<param name="layoutType" value="str:RastySecurityLayout" />
-	<param name="usuarioOid" value="get:oid" />
-
-
-	
-</rasty>

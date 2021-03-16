@@ -113,12 +113,7 @@ class SiteGridModel extends EntityGridModel{
         //$menuOption->setIconClass( "icon-roles" );
         $options[] = $menuOption ;
 
-        $menuOption = new MenuOption();
-        $menuOption->setLabel( $this->localize( "menu.site.consultarUsuarios") );
-        $menuOption->setPageName( "UsuarioConsultar" );
-        $menuOption->addParam("oid",$item->getOid());
-        //$menuOption->setIconClass( "icon-consultar" );
-        $options[] = $menuOption ;
+        
 
 		$group->setMenuOptions( $options );
 

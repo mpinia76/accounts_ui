@@ -10,8 +10,7 @@
     <page name="SiteAgregar"   location="pages/sites/agregar/SiteAgregar.page" url="sites/agregar"/>
     <page name="SiteModificar"   location="pages/sites/modificar/SiteModificar.page" url="sites/modificar"/>
     <page name="UsuarioAsignar"   location="pages/sites/usuarios/UsuarioAsignar.page" url="sites/asignar"/>
-    <page name="UsuarioConsultar"   location="pages/sites/usuarios/UsuarioConsultar.page" url="sites/consultar"/>
-
+    
 
     <page name="AbrirCaja"   location="pages/caja/abrir/AbrirCaja.page" url="caja/abrir"/>
 	<page name="CerrarCaja"   location="pages/caja/cerrar/CerrarCaja.page" url="caja/cerrar"/>
@@ -137,6 +136,7 @@
 	<!-- declaración de las actions -->
 	<action name="Login" class="Accounts\UI\actions\login\Login" url="login"/>
 	<action name="Logout" class="Accounts\UI\actions\login\Logout" url="logout"/>
+	<action name="DameSiteJson" class="Accounts\UI\actions\login\DameSiteJson" url="login/dameSiteJson"/>
 
 
     <action name="AgregarSite" class="Accounts\UI\actions\sites\AgregarSite" url="sites/agregar"/>

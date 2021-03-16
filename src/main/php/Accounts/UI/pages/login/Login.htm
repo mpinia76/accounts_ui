@@ -1,5 +1,59 @@
 <!-- BEGIN: main-->
 <script>
+function dame_site( username ){
+	
+	$("#site_oid").html("");
+	var form = $("#login_form");
+	
+	$.ajax({
+	  	url: '{linkDameSite}',
+	  	type: "POST",
+	  	dataType: "json",
+	  	data: form.serialize(),
+	  	cache: false,
+		complete:function(){
+			//$("#loading").hide();
+		},
+	      success: function(data){
+	      	
+	    	  if( data != null && data["error"]!=null){
+					console.log(data["error"]);
+				}
+				if( data != null && data["info"]!=null){
+
+					$.each(data.sites, function(i, item) {
+		                
+		                $("#site_oid").append("<option value='"+item.cd+"'>"+item.ds+"</option>");
+		            });
+				}  
+	    	  
+	    	  
+	      	if( data != null && data["error"]!=null){
+	      		showMessageError( data["error"], true );
+	      		//inhabilitar el submit.
+	      		$("#submit").hide();
+	      	}
+	      	
+	      	else{
+	      		
+	            $.each(data.perfil, function(i, item) {
+	                
+	                $("#site_oid").append("<option value='"+item.cd+"'>"+item.ds+"</option>");
+	            });
+	      		
+	      		for ( var indice = 0; indice < data["site"].length; indice++) {
+	      			
+	      			
+	      		}
+	      		
+	      		$("#submit").show();
+	      	} 	
+	      	 
+	      }
+	});
+}
+
+
 </script>
 
 <style>
@@ -26,10 +80,15 @@
     <legend>{iniciar_sesion}</legend>
 
         <div class="item">
-            <input  placeholder="{lbl_username} *" type="text" size="24" value="" id="input_username" name="username" jVal="{valid:function (val) { return required(val,'{txt_ingrese_username}'); }}"/>
+            <input  placeholder="{lbl_username} *" type="text" size="24" value="" id="input_username" onBlur="dame_site(this)" name="username" jVal="{valid:function (val) { return required(val,'{txt_ingrese_username}'); }}"/>
         </div>
         <div class="item">
             <input  placeholder="{lbl_password} *"  type="password" classsize="24" value="" id="input_password" name="password"  jVal="{valid:function (val) { return required(val,'{txt_ingrese_password}'); }}"/>
+        </div>
+        <div class="item">
+            <select id="site_oid" name="site_oid" data-required="yes" data-required-msg="{txt_ingrese_site}">
+				<option value="">{lbl_site} *</option>
+			</select>
         </div>
     	<div class="required-fields">(*) {txt_campos_obligatorios}</div>        
     </fieldset>
