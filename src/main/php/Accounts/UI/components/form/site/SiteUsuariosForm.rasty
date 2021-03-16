@@ -1,0 +1,18 @@
+<rasty specificationClass="Accounts\UI\components\form\site\SiteUsuariosForm" templateLocation="SiteUsuariosForm.htm">
+
+	<param name="error" value="get:error" />
+
+	<component id="backSuccess" type="InputHidden">
+		<param name="inputId" value="str:backToOnSuccess" />
+		<param name="name" value="str:backToOnSuccess" />
+		<param name="value" value="backToOnSuccess" />
+	</component>
+
+	<component id="oid" type="InputHidden">
+		<param name="inputId" value="str:oid" />
+		<param name="name" value="str:oid" />
+		<param name="value" value="site.oid" />
+	</component>
+
+
+</rasty>

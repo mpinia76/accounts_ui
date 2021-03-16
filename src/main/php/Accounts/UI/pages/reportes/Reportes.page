@@ -1,0 +1,7 @@
+<rasty specificationClass="Accounts\UI\pages\reportes\Reportes" templateLocation="pages/reportes/Reportes.htm">
+
+	<param name="layoutType" value="str:AccountsMetroLayout" />
+
+
+
+</rasty>

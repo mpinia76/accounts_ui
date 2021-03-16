@@ -1,0 +1,15 @@
+<rasty specificationClass="Accounts\UI\components\boxes\gasto\GastoBox" templateLocation="GastoBox.htm">
+
+	<param name="gastoOid" value="get:gastoOid" />
+
+
+	<component id="fechaHora" type="InputDate">
+		<param name="inputId" value="str:fechaHora" />
+		<param name="name" value="str:fechaHora" />
+		<param name="value" value="gasto.fechaHora" />
+		<param name="placeholder" value="msg:gasto.fechaHora" />
+		<param name="format" value="str:d/m/Y H:i" />
+		<param name="requiredMessage" value="msg:gasto.fecha.required" />
+	</component>
+
+</rasty>

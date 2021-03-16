@@ -1,0 +1,13 @@
+<rasty specificationClass="Accounts\UI\pages\pagos\anular\PagoAnular" templateLocation="pages/pagos/anular/PagoAnular.htm">
+
+	<param name="layoutType" value="str:AccountsMetroLayout" />
+
+	<param name="pagoOid" value="get:pagoOid" />
+
+	<param name="error" value="get:error" />
+
+	<component id="pago" type="PagoBox">
+		<param name="pago" value="pago" />
+	</component>
+
+</rasty>

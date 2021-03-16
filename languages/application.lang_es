@@ -1,0 +1,843 @@
+{
+
+	"common.campos_obligatorios":"Campos requeridos",
+
+	"app.title":"Gestión de cuentas",
+
+	"app.pdf.footer":"",
+
+	"menu.page":"Opciones de la página",
+	"menu.main":"Menú de navegación",
+	"menu.main.reload":"Actualizar la página",
+	"menu.main.panel":"Panel de trabajo",
+
+	"menu.principal":"Principal",
+	"menu.home":"Home",
+	"menu.todos":"Todos",
+	"menu.agregar":"Agregar",
+
+	"menu.admin":"Administración",
+	"menu.admin_home":"Tablero de control",
+
+
+	"menu.agencia":"Agencia",
+
+	"menu.stats": "Estadísticas",
+	"menu.stats.reportes": "Reportes",
+
+	"menu.balances.dia":"Balance del día",
+	"menu.balances.mes":"Balance mensual",
+	"menu.balances.anio":"Balance anual",
+
+    "menu.seguridad":"Seguridad",
+
+
+
+    "menu.usuarios":"Usuarios",
+    "menu.usuarios.agregar":"Nuevo Usuario",
+    "menu.usuarios.modificar":"Modificar Usuario",
+    "menu.usuarios.asignarRoles":"Asignar roles",
+    "menu.usuarios.consultarRoles":"Consultar roles",
+    "menu.usuarios.eliminar":"Eliminar Usuario",
+
+    "menu.permisos":"Permisos",
+    "menu.permisos.agregar":"Nuevo Permiso",
+    "menu.permisos.modificar":"Modificar Permiso",
+    "menu.permisos.eliminar":"Eliminar Permiso",
+
+    "menu.roles":"Roles",
+    "menu.roles.agregar":"Nuevo Rol",
+    "menu.roles.modificar":"Modificar Rol",
+    "menu.roles.eliminar":"Eliminar Rol",
+    "menu.roles.asignarPermisos":"Asignar permisos",
+    "menu.roles.consultarPermisos":"Consultar permisos",
+
+    "menu.sites":"Sitios",
+    "menu.sites.listar":"Listado de Sitios",
+    "menu.sites.agregar":"Agregar Sitio",
+    "menu.sites.modificar":"Modificar Sitios",
+    "menu.site.eliminar":"Eliminar el Sitio",
+
+    "menu.site.asignarUsuarios":"Asignar usuarios",
+    "menu.site.consultarUsuarios":"Consultar usuarios",
+
+	"menu.informes":"Informes",
+	"menu.informesSemanales.listar":"Informes Semanales",
+	"menu.informesSemanales.agregar":"Agregar Informe Semanal",
+	"menu.informesSemanales.modificar":"Modificar Informe Semanal",
+	"menu.informesSemanales.reportes":"Reportes",
+
+	"menu.conceptoGastos":"Conceptos de Gastos",
+	"menu.conceptoGastos.listar":"Listado de Conceptos de Gastos",
+	"menu.conceptoGastos.agregar":"Agregar Concepto de Gasto",
+	"menu.conceptoGastos.modificar":"Modificar Conceptos de Gastos",
+	"menu.conceptoGasto.eliminar":"Eliminar el Concepto de Gasto",
+
+	"menu.gastos":"Gastos",
+	"menu.gastos.listar":"Gastos",
+	"menu.gastos.anular":"Anular Gasto",
+	"menu.gastos.agregar":"Agregar Gasto",
+	"menu.gastos.pagar":"Pagar Gasto",
+
+
+	"menu.bancos":"Cuentas",
+    	"menu.bancos.listar":"Listado de Cuentas",
+    	"menu.bancos.agregar":"Agregar Cuenta",
+    	"menu.bancos.modificar":"Modificar Cuenta",
+    	"menu.banco.eliminar":"Eliminar la Cuenta",
+
+	"menu.cuentas":"Cuentas",
+	"menu.total":"Total",
+
+	"menu.cuenta":"Cuenta",
+	"menu.caja":"Caja",
+
+	"menu.cajaChica":"Caja chica",
+	"menu.cajaChica.depositarEnBanco":"Depositar en Banco",
+
+	"menu.movimientos_caja_actual":"Movimientos Caja",
+	"menu.movimientos_caja_chica":"Movimientos Caja Chica",
+	"menu.bancos":"Cuentas",
+	"menu.movimientos_banco":"Movimientos",
+
+
+
+	"menu.transferir":"Transferir",
+
+
+
+	"menu.logout":"Salir del sistema",
+
+    "usuarios.title": "Listado de Usuarios",
+
+    "usuarios.listar": "Listado de Usuarios",
+    	"usuario.agregar": "Agregar un nuevo Usuario",
+    	"usuario.agregar.title": "Agregar un nuevo Usuario",
+    	"usuario.agregar.legend": "Ingrese los datos del Usuario",
+
+    	"user.add.username.repetead": "Ya existe un usuario para el nombre ingresado",
+
+    	"usuario.modificar": "Modificar datos del Usuario",
+    	"usuario.modificar.title": "Modificar Usuario",
+    	"usuario.modificar.legend": "Modifique los datos del Usuario",
+
+    	"usuario.eliminar": "Eliminar el Usuario",
+    	"usuario.eliminar.title": "Eliminar Usuario",
+    	"usuario.eliminar.legend": "Confirma eliminar el Usuario?",
+
+    	"usuario.eliminar.usuario.logueado.exception": "No puede eliminarse Ud mismo",
+    	"usuario.eliminar.cliente.exception": "No puede eliminar a un cliente",
+
+    	"usuario.buscar": "Buscar Usuarios",
+    	"usuario.buscar.again": "Afinar búsqueda...",
+
+    	"usuario.username":"Nombre",
+    	"usuario.username.unicity":"Ya existe un Usuario para el Nombre indicado",
+    	"usuario.username.required":"Ingrese un nombre",
+
+    	"usuario.name":"Nombre",
+    	"usuario.name.required":"Ingrese un nombre",
+
+    	"usuario.lastname":"Apellido",
+    	"usuario.lastname.required":"Ingrese un apellido",
+
+    	"usuario.email":"E-mail",
+    	"usuario.email.unicity":"Ya existe un Usuario para el E-mail indicado",
+    	"usuario.email.required":"Ingrese un e-mail",
+
+       	"usuario.password":"Clave",
+    	"usuario.password.required":"Ingrese una clave",
+
+    	"usuario.password.repeat":"Repetir Clave",
+    	"usuario.password.repeat.required":"Ingrese nuevamente la clave",
+
+    	"usuario.password.repeat.invalid":"Las claves ingresadas son distintas",
+
+    	"usuario.password.old":"Clave actual",
+    	"usuario.password.old.required":"Ingrese la clave actual",
+
+    	"usuario.newPassword":"Nueva clave",
+    	"usuario.newPassword.required":"Ingrese la nueva clave",
+
+    	"usuario.newPassword.repeat":"Repetir nueva clave",
+    	"usuario.newPassword.repeat.required":"Ingrese nuevamente la clave",
+
+    	"user.password.invalid": "La clave ingresada no es la correcta",
+
+    	"usuario.cambiarClave.newPasswordRepetir.invalid": "Las nuevas claves ingresadas son distintas",
+
+
+    	"solicitarNuevaClave.title": "Recupero de clave",
+    	"solicitarNuevaClave.legend": "Recupero de clave",
+    	"solicitarNuevaClave.submit": "Recuperar",
+    	"solicitarNuevaClave.login": "Ingresar",
+    	"solicitarNuevaClave.registrarse": "Registrarse",
+
+    	"solicitarNuevaClave.usuario.invalid": "Usuario no registrado",
+    	"solicitarNuevaClaveSuccess.title": "Recupero de clave",
+
+    	"nuevaClave.confirmar.title": "Obtener nueva clave",
+    	"nuevaClave.confirmar.legend": "Genera tu nueva clave",
+
+    	"nuevaClave.newPassword": "Nueva clave",
+    	"nuevaClave.newPassword.repetir": "Repite la clave",
+    	"nuevaClave.securitycode": "Código de verificación",
+    	"nuevaClave.captcha": "Ingresa el código de verificación",
+
+    	"nuevaClave.captcha.invalido": "El código de verificación no es correcto",
+
+    	"nuevaClave.newPassword.repetir.invalid": "Las claves ingresadas no coinciden",
+
+    	"nuevaClave.newPassword.requerida": "Ingresa la nueva clave",
+    	"nuevaClave.newPassword.repetir.requerida": "Ingresa nuevamente la clave",
+    	"nuevaClave.captcha.requerido": "Ingresa el código de verificación",
+
+    	"nuevaClaveConfirmar.success.title": "Recupero de clave",
+
+
+    	"usuario.oid":"Código interno",
+    	"usuario.lastLogin":"Último login",
+      	"usuario.loginFrom":"IP",
+
+      	"usuario.asignarRoles.title": "Asignando roles",
+    	"usuario.asignarRoles.legend": "Asignar roles al usuario $1",
+
+      	"registracion.usuario.legend": "Crea tu usuario",
+     	"registracion.email": "E-mail",
+     	"registracion.emailRepetir": "Confirmar e-mail",
+     	"registracion.clave": "Contraseña",
+     	"registracion.clave.formato": "8 o más caracteres e incluye al menos una mayúscula y un número",
+     	"usuario.clave.formato": "8 o más caracteres e incluye al menos una mayúscula y un número",
+     	"registracion.claveRepetir": "Confirmar contraseña",
+    	"registracion.claveRepetir.invalid": "Las contraseñas ingresadas no coinciden",
+
+    	"registracion.email.repetido": "Ya existe un cliente con el email ingresado",
+     	"registracion.confirmar.codigoExpirado": "El código de validación no es válido",
+
+
+    	"email.formato.invalido":"formato de e-mail incorrecto",
+
+     	"registracion.email.requerido": "Ingresa tu e-mail",
+     	"registracion.emailRepetir.requerido": "Confirma tu e-mail",
+     	"registracion.clave.requerida": "Ingreso una Contraseña",
+     	"registracion.claveRepetir.requerida": "Confirmar la contraseña",
+
+    	"permisos.title": "Listado de Permisos",
+
+    	"permisos.listar": "Listado de Permisos",
+    	"permiso.agregar": "Agregar un nuevo Permiso",
+    	"permiso.agregar.title": "Agregar un nuevo Permiso",
+    	"permiso.agregar.legend": "Ingrese los datos del Permiso",
+
+    	"permiso.modificar": "Modificar datos del Permiso",
+    	"permiso.modificar.title": "Modificar Permiso",
+    	"permiso.modificar.legend": "Modifique los datos del Permiso",
+
+    	"permiso.buscar": "Buscar Permisos",
+    	"permiso.buscar.again": "Afinar búsqueda...",
+
+    	"permiso.oid":"Código",
+    	"permiso.name":"Nombre",
+    	"permiso.name.required":"Ingrese un nombre",
+    	"permiso.name.unicity":"Ya existe un Permiso con el Nombre indicado",
+    	"permiso.description":"Descripción",
+    	"permiso.padre":"Padre",
+
+
+    	"roles.title": "Listado de Roles",
+
+    	"roles.listar": "Listado de Roles",
+    	"rol.agregar": "Agregar un nuevo Rol",
+    	"rol.agregar.title": "Agregar un nuevo Rol",
+    	"rol.agregar.legend": "Ingrese los datos del Rol",
+
+    	"usergroup.add.name.repetead": "Ya existe un rol para el nombre ingresado",
+
+    	"rol.modificar": "Modificar datos del Rol",
+    	"rol.modificar.title": "Modificar Rol",
+    	"rol.modificar.legend": "Modifique los datos del Rol",
+
+    	"rol.buscar": "Buscar Roles",
+    	"rol.buscar.again": "Afinar búsqueda...",
+
+    	"rol.asignarPermisos.title": "Asignando permisos",
+    	"rol.asignarPermisos.legend": "Asignar permisos al rol $1",
+
+    	"rol.consultarPermisos.title": "Consultar permisos de un rol",
+    	"rol.consultarPermisos.legend": "Permisos del rol $1",
+
+    	"usuario.consultarRoles.legend" :"Consultando roles de $1",
+    	"usuario.consultarRoles.title" :"Roles de usuario}",
+
+    	"rol.oid":"Código",
+    	"rol.name":"Nombre",
+    	"rol.name.required":"Ingrese un nombre",
+    	"rol.name.unicity":"Ya existe un Rol con el Nombre indicado",
+    	"rol.description":"Descripción",
+
+    	"combo.empty": "- seleccionar -",
+
+    	"user.required.exception.msg": "Debe iniciar sesión para operar el sistema",
+    	"user.permission.exception.msg": "No cuenta con los privilegios para realizar la operación",
+    	"invalid.password.exception.msg": "La clave ingresada no es válida",
+
+
+	"user.required.exception.msg": "Debe iniciar sesión para operar el sistema",
+	"invalid.password.exception.msg": "La clave ingresada no es válida",
+
+	"cliente.ayuda.autocomplete": "Ingresa el nombre del cliente así te puedo<br />sugerir alguno de los registrados.<br />Recuerda siempre comenzar escribiendo el apellido.",
+	"cliente.ayuda.popup": "Si te resulta más práctico, puedes<br />utilizar la lupa para hacer una búsqueda avanzada.",
+	"cliente.ayuda.add":"Si no encuentras al cliente, utiliza<br />el '+' para ingresar sus datos y registrarlo en el sistema",
+
+	"login.title":"Gestión de Cuentas",
+	"login.titulo":"Gestión de Cuentas",
+	"login.subtitulo":"",
+
+	"login.iniciar_sesion":"Iniciar sesión",
+	"login.username":"Usuario",
+	"login.password":"Clave",
+	"login.ingrese_username":"Ingrese un usuario",
+	"login.ingrese_password":"Ingrese una clave",
+	"login.ingresar":"Comenzar!",
+	"login.invalid_password": "La clave ingresada no es válida",
+	"login.user_not_found": "El usuario ingresado no es válido",
+
+
+	"site.title": "Listado de Sitios",
+    "site.agregar": "Agregar un sitio",
+    "site.agregar.title": "Agregar un sitio",
+    "site.agregar.legend": "Ingrese un sitio",
+
+    "site.modificar": "Modificar sitio",
+    "site.modificar.title": "Modificar sitio",
+    "site.modificar.legend": "Modifique el sitio",
+
+
+    "site.eliminar.confirm.title": "Eliminar Sitio",
+    "site.eliminar.confirm.msg": "Confirma eliminar el sitio seleccionado?",
+
+    "site.buscar": "Buscar sitios",
+    "site.buscar.again": "Afinar búsqueda...",
+
+    "site.oid":"Id",
+    "site.nombre":"Nombre",
+    "site.nombre.required": "Ingrese el nombre",
+    "site.mail":"E-mail",
+     "site.mail.required": "Ingrese el E-mail",
+    "site.logo":"Logo",
+    "site.description":"Descripción",
+
+    "site.asignarUsuarios.title": "Asignando usuarios",
+    "site.asignarUsuarios.legend": "Asignar usuarios al sitio $1",
+
+	"admin_home.title": "Cuentas",
+	"admin_home.subtitle": "Administración",
+
+	"admin_home.informes": "Informes",
+	"admin_home.informesSemanales": "Semanales",
+
+	"admin_home.informesStats": "Reportes",
+
+
+
+
+	"empleado_home.title": "Panel de $1",
+	"empleado_home.legend": "Resumen del día de $1",
+
+
+	"empleado_home.movimientosCaja.legend": "Últimos movimientos de caja",
+	"empleado_home.caja.legend": "Caja $1",
+	"empleado_home.caja_abrir.legend": "No hay caja abierta, debe abrir la caja",
+	"empleado_home.stats.legend": "Totales del día",
+	"empleado_home.accesos_rapidos.legend": "Accesos rápidos",
+
+
+
+
+	"accounts.transferir.title": "Transferencia entre Cuentas",
+	"accounts.transferir.legend": "Ingrese los datos de la transferencia",
+
+	"transferir.fechaHora": "Fecha",
+	"transferir.origen": "Origen",
+	"transferir.destino": "Destino",
+	"transferir.monto": "Monto",
+	"transferir.monto.required": "Ingrese el monto",
+	"transferir.observaciones": "Observaciones",
+	"transferir.observaciones.placeholder": "Observaciones",
+
+
+
+
+ 	"stats.caja.movimientos": "Movimientos",
+ 	"stats.caja.ventas": "Ventas",
+ 	"stats.caja.gastos": "Gastos",
+ 	"stats.caja.pagos": "Pagos",
+ 	"stats.caja.saldo": "Saldo",
+
+ 	"dia.domingo.label": "Domingo",
+	"dia.lunes.label": "Lunes",
+	"dia.martes.label": "Martes",
+	"dia.miercoles.label": "Miércoles",
+	"dia.jueves.label": "Jueves",
+	"dia.viernes.label": "Viernes",
+	"dia.sabado.label": "Sábado",
+
+
+
+
+
+
+
+	"caja":"Caja",
+	"caja.fecha":"Fecha",
+	"caja.saldo":"Saldo",
+ 	"caja.saldoInicial":"Saldo inicial",
+ 	"caja.recaudacion":"Ganancia",
+ 	"caja.pagos":"Pagos",
+ 	"caja.ventas":"Ventas",
+ 	"caja.gastos":"Gastos",
+ 	"caja.horaApertura":"Apertura",
+ 	"caja.horaCierre":"Cierre",
+ 	"caja.cajero":"Cajero",
+   	"caja.sucursal":"Sucursal",
+   	"caja.numero":"Número de Caja",
+   	"caja.ventas.ctasctes": "Ventas en Cta Cte",
+   	"caja.pagos.ctasctes": "Pagos en Cta Cte",
+   	"caja.ventas.online": "Ventas Online",
+   	"caja.pagos.online": "Pagos Online",
+   	"caja.ventas.online.ctacte": "Ventas Online Cta Cte",
+
+   	"caja.ventasOnline.placeholder": "Ingrese las Ventas Online",
+   	"caja.pagosOnline.placeholder": "Ingrese los Pagos Online",
+
+   	"caja.detalle_ventas.legend" :"Detalle de ventas x Categoría",
+
+   	"caja.totales_dia.legend": "Balance de cajas del día",
+   	"caja.totales_ventas_dia.legend": "Detalle de ventas totales del día x Categoría",
+
+ 	"caja.abrir": "Abrir caja",
+	"caja.abrir.title": "Abrir nuevo caja",
+	"caja.abrir.legend": "Ingrese los datos de la caja",
+
+  	"caja.cerrar": "Cerrar caja",
+	"caja.cerrar.title": "Cerrar caja",
+  	"caja.cerrar.legend": "Cerrando caja",
+
+  	"caja.rendir": "Rendir caja",
+	"caja.rendir.title": "Rendir caja",
+  	"caja.rendir.legend": "Rendir caja",
+
+ 	"caja.retirarEfectivo": "Retirar Efectivo",
+	"caja.retirarEfectivo.title": "Retirar Efectivo de Caja",
+	"caja.retirarEfectivo.legend": "Efectivo a retirar",
+  	"caja.retirarEfectivo.caja_legend": "Caja",
+
+ 	"caja.ingresarEfectivo": "Ingresar Efectivo",
+	"caja.ingresarEfectivo.title": "Ingresar Efectivo a Caja",
+	"caja.ingresarEfectivo.legend": "Efectivo a ingresar ",
+  	"caja.ingresarEfectivo.caja_legend": "Caja",
+
+  	"caja.depositarBanco": "Depositar en Banco",
+
+  	"caja.seleccionar": "Seleccionar caja",
+	"caja.seleccionar.title": "seleccionar caja",
+	"caja.seleccionar.legend": "Seleccione alguna de las cajas abiertas",
+  	"caja.seleccionar.caja_legend": "Caja seleccionada",
+  	"caja.option_empty": "- Seleccione una caja -",
+  	"caja.toString":"Caja $1 - $2 / $3",
+
+  	"retirarEfectivo.montoRetirar": "Monto",
+  	"retirarEfectivo.montoRetirar.required": "Ingrese el monto a retirar",
+  	"retirarEfectivo.observaciones": "Observaciones",
+  	"retirarEfectivo.observaciones.placeholder": "Aquí puede escribir notas que considera necesarias",
+
+  	"ingresarEfectivo.montoIngresar": "Monto",
+  	"ingresarEfectivo.montoIngresar.required": "Ingrese el monto a ingresar",
+  	"ingresarEfectivo.observaciones": "Observaciones",
+  	"ingresarEfectivo.observaciones.placeholder": "Aquí puede escribir notas que considera necesarias",
+
+	"caja.movimientos.buscar": "Movimientos de caja",
+	"cajaChica.movimientos.buscar": "Movimientos de caja chica",
+	"cuentaCorriente.movimientos.buscar": "Cuenta Corriente de $1",
+
+
+
+	"cuenta.saldo": "Saldo",
+
+	"caja.movimientos.title": "Movimientos de caja",
+	"cajaChica.movimientos.title": "Movimientos de caja chica",
+
+
+	"movimientoCuenta.cuenta": "Cuenta",
+	"movimientoCuenta.oid": "Código",
+	"movimientoCuenta.fechaHora": "Fecha",
+	"movimientoCuenta.concepto": "Concepto",
+	"movimientoCuenta.observaciones": "Observaciones",
+	"movimientoCuenta.haber": "Haber",
+	"movimientoCuenta.debe": "Debe",
+	"movimientoCuenta.saldo": "Saldo",
+
+
+
+	"forma.pago.efectivo": "Caja",
+	"forma.pago.tarjeta": "Tarjeta",
+	"forma.pago.ctacte": "Cuenta Corriente",
+	"forma.pago.cajaChica": "Caja chica",
+	"forma.pago.bapro": "BAPRO",
+	"forma.pago.pendiente": "Pendiente",
+
+	"bancos.title": "Listado de Cuentas",
+    	"banco.agregar.title": "Agregar una cuenta",
+    	"banco.agregar.legend": "Ingrese una cuenta",
+
+    	"banco.modificar": "Modificar cuenta",
+    	"banco.modificar.title": "Modificar cuenta",
+    	"banco.modificar.legend": "Modifique la cuenta",
+
+
+    	"banco.eliminar.confirm.title": "Eliminar Cuenta",
+    	"banco.eliminar.confirm.msg": "Confirma eliminar la cuenta seleccionado?",
+
+    	"banco.buscar": "Buscar cuentas",
+    	"banco.buscar.again": "Afinar búsqueda...",
+
+    	"banco.oid":"Id",
+    	"banco.nombre":"Nombre",
+    	"banco.nombre.placeholder":"Nombre",
+    	"banco.nombre.required": "Ingrese el nombre",
+    	"banco.fecha":"Fecha",
+    	"banco.saldoInicial":"Saldo Inicial",
+    	"banco.saldoInicial.required": "Ingrese el saldo inicial",
+    	"banco.saldo":"Saldo",
+    	"banco.saldo.required": "Ingrese el saldo",
+
+    	"banco.titular":"Titular",
+        "banco.titular.placeholder":"Titular",
+        "banco.cuit":"Cuit",
+        "banco.cuit.placeholder":"Cuit",
+        "banco.cbu":"Cbu",
+        "banco.cbu.placeholder":"Cbu",
+
+        "banco.numero.placeholder":"Nro de cuenta",
+        "banco.numero.required": "Ingrese el Nro de cuenta",
+        "cuenta.banco":"Banco",
+        "cuenta.cuentaSocio":"Socio",
+
+	"conceptoGasto.title": "Listado de Conceptos de Gastos",
+	"conceptoGasto.agregar": "Agregar un concepto de gasto",
+	"conceptoGasto.agregar.title": "Agregar un concepto de gasto",
+	"conceptoGasto.agregar.legend": "Ingrese un concepto de gasto",
+
+	"conceptoGasto.modificar": "Modificar concepto de gasto",
+	"conceptoGasto.modificar.title": "Modificar concepto de gasto",
+	"conceptoGasto.modificar.legend": "Modifique el concepto de gasto",
+
+
+	"conceptoGasto.eliminar.confirm.title": "Eliminar Concepto de Gasto",
+	"conceptoGasto.eliminar.confirm.msg": "Confirma eliminar el concepto de gasto seleccionado?",
+
+	"conceptoGasto.buscar": "Buscar conceptos de gastos",
+	"conceptoGasto.buscar.again": "Afinar búsqueda...",
+
+	"conceptoGasto.oid":"Id",
+	"conceptoGasto.nombre":"Nombre",
+
+	"conceptoGasto.oid":"Id",
+	"conceptoGasto.nombre":"Nombre",
+
+
+	"gastos.title": "Listado de Gastos",
+	"gasto.agregar": "Agregar gasto",
+	"gasto.agregar.title": "Agregar un nuevo gasto",
+	"gasto.agregar.legend": "Ingrese los datos del gasto",
+
+	"gastos.por_vencer.vacio" : "No hay gastos vencidos o por vencer",
+
+	"gasto.confirmar": "Confirmar gasto",
+	"gasto.cancelar": "Cancelar y volver",
+
+	"gasto.buscar": "Buscar gastos",
+
+	"gasto.filter.hoy": "Gastos del día",
+	"gasto.filter.semanaActual": "Gastos de la semana",
+	"gasto.filter.mesActual": "Gastos de este mes",
+	"gasto.filter.anioActual": "Gastos de este año",
+	"gasto.filter.impagos": "Gastos impagos",
+	"gasto.filter.porVencer": "Gastos vencidos o por vencer",
+
+
+	"gasto.pagar": "Pagar gasto",
+	"gasto.pagar.title": "Pagar gasto",
+
+	"gasto.pagar.imapago.required": "El gasto ya fue PAGADO, no puede volver a pagarlo",
+
+	"gasto.anular": "Anular gasto",
+	"gasto.anular.title": "Anular gasto",
+
+	"anularGasto.gasto.legend": "Confirme la anulación del gasto",
+	"anularGasto.confirm": "Confirmar",
+	"anularGasto.cancel": "Cancelar",
+
+	"gasto.oid": "Código",
+	"gasto.fechaHora": "Fecha",
+	"gasto.fechaVencimiento": "F.Vencimiento",
+	"gasto.sucursal": "Sucursal",
+	"gasto.concepto": "Concepto",
+	"gasto.observaciones": "Observaciones",
+	"gasto.observaciones.placeholder": "Aquí puede escribir notas que considera necesarias",
+	"gasto.monto": "Monto",
+	"gasto.monto.required": "Ingrese el monto",
+	"gasto.estado": "Estado",
+
+	"gasto.impago.label": "Impago",
+	"gasto.pagado.label": "Pagado",
+	"gasto.anulado.label": "Anulado",
+
+
+	"pagar.gasto.title": "Cobrar gasto",
+	"pagar.gasto.legend": "Datos del gasto a pagar",
+	"pagar.forma_pago.legend": "Elija la forma de pago",
+
+
+
+
+	"pago.pendiente.label": "Pendiente",
+	"pago.realizado.label": "Pagado",
+	"pago.anulado.label": "Anulado",
+
+
+	"pagar.pagoPremio.title": "Pagar premio",
+	"pagar.pagoPremio.legend": "Datos del premio a pagar",
+	"pagar.forma_pago.legend": "Elija la forma de pago",
+
+
+
+
+
+	"banco.movimientos.title": "Movimientos de banco",
+  	"banco.movimientos.buscar": "Movimientos de banco",
+
+  	"banco.depositar": "Depositar",
+  	"banco.depositarEfectivo": "Depositar efectivo",
+  	"banco.depositarEfectivo.title": "Depositar efectivo",
+  	"banco.depositarEfectivo.banco_legend": "Banco",
+  	"banco.depositarEfectivo.legend": "Ingrese detalles del depósito",
+
+  	"depositarEfectivo.banco": "Banco",
+  	"depositarEfectivo.fechaHora": "Fecha",
+  	"depositarEfectivo.fechaHora.required": "Ingrese la fecha",
+  	"depositarEfectivo.montoDepositar": "Monto",
+   	"depositarEfectivo.montoDepositar.required": "Ingrese el monto a depositar",
+   	"depositarEfectivo.observaciones": "Observaciones",
+
+  	"banco.saldo": "Saldo",
+  	"banco.saldoInicial": "Saldo inicial",
+  	"banco.numero": "Nro de cuenta",
+  	"banco.cuit": "Cuit",
+  	"banco.titular": "Titular",
+  	"banco.nombre": "Nombre",
+  	"banco.cbu": "CBU",
+
+
+
+
+	"balanceDia.legend": "Balance del día",
+	"balanceDia.detalle_ventas.legend": "Detalle de ventas x Categoría",
+ 	"balanceDia.title":"Balance del día",
+ 	"balanceDia.pagos":"Pagos",
+ 	"balanceDia.ventas":"Ventas",
+ 	"balanceDia.gastos":"Gastos",
+ 	"balanceDia.fecha":"Fecha",
+
+
+	"balanceMes.legend": "Balance del mes",
+ 	"balanceMes.title":"Balance del mes",
+ 	"balanceMes.pagos":"Pagos",
+ 	"balanceMes.ventas":"Ventas",
+ 	"balanceMes.gastos":"Gastos",
+ 	"balanceMes.comisiones":"Comisiones",
+ 	"balanceMes.ganancia":"Ganancia",
+ 	"balanceMes.mes":"Mes",
+
+	"balanceAnio.legend": "Balance del Año",
+ 	"balanceAnio.title":"Balance del Año",
+ 	"balanceAnio.pagos":"Pagos",
+ 	"balanceAnio.ventas":"Ventas",
+ 	"balanceAnio.gastos":"Gastos",
+ 	"balanceAnio.comisiones":"Comisiones",
+ 	"balanceAnio.ganancia":"Ganancia",
+ 	"balanceAnio.mes":"Mes",
+ 	"balanceAnio.anio":"Año",
+
+	"balanceAnio.detalle_mes.legend":"Detalle mensual",
+
+	"balanceCajas.legend": "Balance de Cajas del día",
+	"balanceDia.detalle_ventas.legend": "Detalle de ventas x Categoría",
+ 	"balanceDia.title":"Balancia Cajas del día",
+ 	"balanceDia.pagos":"Pagos",
+ 	"balanceDia.ventas":"Ventas",
+ 	"balanceDia.gastos":"Gastos",
+ 	"balanceDia.fecha":"Fecha",
+
+  	"grid.operaciones": "Operaciones",
+   	"grid.resultados": "Resultados de la búsqueda",
+
+   	"entitygrid.pagination.of": "de",
+   	"entitygrid.pagination.next": "siguiente",
+   	"entitygrid.pagination.previous": "anterior",
+    "entitygrid.pagination.first": "primero",
+    "entitygrid.pagination.last": "último",
+
+
+    "form.aceptar": "Confirmar",
+    "form.cancelar": "Cancelar",
+    "form.volver": "Volver",
+
+    "filter.buscar": "Buscar",
+    "filter.buscar.again": "Afinar búsqueda...",
+    "filter.resultados": "Resultados de la búsqueda",
+    "filter.opciones": "Opciones",
+    "filter.close.label": "Cerrar",
+
+ 	"addpopup.legend":"Agregar",
+
+    "autocomplete.empty.result": "No se encontraron resultados",
+    "autocomplete.entity.add": "Agregar",
+
+    "artista.imagen":"Imagen del artista",
+    	"uploadImage.upload": "Subir logo",
+    	"uploadImage.legend": "Selecciona un logo para el sitio",
+        "uploadImage.file": "Logo",
+     	"uploadImage.thumbnail_msg": " ",
+        "uploadImage.thumbnail": "Thumbnail",
+
+        "uploadImage.loading": "Cargando...",
+
+ 	"criteria.fechaDesde": "Desde",
+    "criteria.fechaHasta": "Hasta",
+    "criteria.mes": "Mes",
+
+ 	"mes.enero":"Enero",
+ 	"mes.febrero":"Febrero",
+ 	"mes.marzo":"Marzo",
+ 	"mes.abril":"Abril",
+ 	"mes.mayo":"Mayo",
+ 	"mes.junio":"Junio",
+ 	"mes.julio":"Julio",
+ 	"mes.agosto":"Agosto",
+ 	"mes.septiembre":"Septiembre",
+ 	"mes.octubre":"Octubre",
+ 	"mes.noviembre":"Noviembre",
+ 	"mes.diciembre":"Diciembre",
+
+ 	"informeSemanal.oid":"Id",
+ 	"informeSemanal.fechaDesde":"Desde",
+ 	"informeSemanal.fechaHasta":"Hasta",
+ 	"informeSemanal.ventas":"Ventas",
+ 	"informeSemanal.cancelaciones":"Cancelaciones",
+ 	"informeSemanal.pagos":"Pagos",
+ 	"informeSemanal.pagoPorLoteria":"Pago por Lotería",
+ 	"informeSemanal.comision":"Comisión",
+ 	"informeSemanal.ajustes":"Ajustes",
+ 	"informeSemanal.deuda":"Deuda",
+ 	"informeSemanal.user":"Usuario",
+ 	"informeSemanal.sucursal":"Sucursal",
+
+ 	"informesSemanales.title":"Informes semanales",
+ 	"informeSemanal.buscar": "Buscar informes",
+ 	"informeSemanal.buscar.again": "Buscar informes",
+ 	"informeSemanal.agregar.legend":"Informe semanal",
+ 	"informeSemanal.agregar.title":"Agregar informe semanal",
+ 	"informeSemanal.modificar.legend":"Informe semanal",
+ 	"informeSemanal.modificar.title":"Modificar informe semanal",
+
+ 	"informeDiarioDebitoCredito.oid":"Id",
+ 	"informeDiarioDebitoCredito.fecha":"Recibido",
+ 	"informeDiarioDebitoCredito.fecha.required":"Ingrese la fecha de Recibido",
+ 	"informeDiarioDebitoCredito.fechaVencimiento":"Vencimiento",
+ 	"informeDiarioDebitoCredito.fechaVencimiento.required":"Ingrese la fecha de Vencimiento",
+ 	"informeDiarioDebitoCredito.estado":"Estado",
+ 	"informeDiarioDebitoCredito.estado.required":"Indique el Estado",
+ 	"informeDiarioDebitoCredito.debito":"Débito",
+ 	"informeDiarioDebitoCredito.debito.required":"Ingrese el monto a débitar",
+ 	"informeDiarioDebitoCredito.credito":"Crédito",
+ 	"informeDiarioDebitoCredito.credito.required":"Ingrese el monto a acreditar",
+ 	"informeDiarioDebitoCredito.user":"Usuario",
+ 	"informeDiarioDebitoCredito.sucursal":"Sucursal",
+ 	"informeDiarioDebitoCredito.banco":"Banco",
+
+ 	"informesDiariosDebitoCredito.title":"Informes diarios Débito/Crédito",
+ 	"informeDiarioDebitoCredito.buscar": "Buscar informes",
+ 	"informeDiarioDebitoCredito.buscar.again": "Buscar informes",
+ 	"informeDiarioDebitoCredito.agregar.legend":"Informe diario débito/crédito",
+ 	"informeDiarioDebitoCredito.agregar.title":"Agregar diario débito/crédito",
+ 	"informeDiarioDebitoCredito.modificar.legend":"Informe diario débito/crédito",
+ 	"informeDiarioDebitoCredito.modificar.title":"Modificar diario débito/crédito",
+
+ 	"informeDiarioDebitoCredito.pendiente.label": "Pendiente",
+ 	"informeDiarioDebitoCredito.depositado.label": "Depositado",
+ 	"informeDiarioDebitoCredito.debitado.label": "Debitado",
+ 	"informeDiarioDebitoCredito.acreditado.label": "Acreditado",
+
+
+ 	"informeDiarioComision.oid":"Id",
+ 	"informeDiarioComision.fecha":"Fecha",
+ 	"informeDiarioComision.fecha.required":"Ingrese la fecha del informe",
+ 	"informeDiarioComision.fecha.repetida":"Ya existe un informe para la fecha indicada",
+ 	"informeDiarioComision.comision":"Comisión",
+ 	"informeDiarioComision.comision.required":"Ingrese el monto de la comisión",
+ 	"informeDiarioComision.user":"Usuario",
+ 	"informeDiarioComision.sucursal":"Sucursal",
+
+ 	"informesDiariosComision.title":"Informes diarios Comisiones",
+ 	"informeDiarioComision.buscar": "Buscar informes",
+ 	"informeDiarioComision.buscar.again": "Buscar informes",
+ 	"informeDiarioComision.agregar.legend":"Informe diario comisión",
+ 	"informeDiarioComision.agregar.title":"Agregar diario comisión",
+ 	"informeDiarioComision.modificar.legend":"Informe diario comisión",
+ 	"informeDiarioComision.modificar.title":"Modificar diario débito/crédito",
+
+ 	"stats.informeSemanal.title":"Reportes / Informes Semanales",
+ 	"stats.informeSemanal.reportes.legend":"Reportes sobre Informes Semanales",
+ 	"stats.informeSemanal.porMes.legend":"Totales por mes",
+
+ 	"stats.informeSemanal.porMes.legend": "Importes totales por mes",
+ 	"stats.informes.informeSemanalPorMes.anio": "Año",
+ 	"stats.informes.informeSemanalPorMes.totalVentas": "Importe Total por Ventas",
+ 	"stats.informes.informeSemanalPorMes.totalPagos": "Importe Total por Pagos",
+ 	"stats.informes.informeSemanalPorMes.totalComisiones": "Importe Total por Comisiones",
+
+ 	"stats.informeSemanal.porSemana.legend": "Importes totales por semana",
+
+ 	"stats.informeDiarioComision.porMes.legend": "Comisión mensual",
+ 	"stats.informes.informeDiarioComisionPorMes.anio": "Año",
+ 	"stats.informes.informeDiarioComisionPorMes.totalComisiones": "Total por Comisiones",
+
+
+
+	"reportes.title": "Reportes",
+ 	"reportes.legend": "Reportes",
+
+ 	"reportes.gastos.gastosAnio.legend": "Gastos x Año x Concepto",
+
+ 	"gastosAnio.anio": "Año",
+ 	"gastosAnio.gastos": "Gastos totales",
+ 	"gastosAnio.detalle_mes.legend": "Detalles x mes",
+
+ 	"gastosAnio.concepto": "Concepto",
+ 	"gastosAnio.totalAnio": "Total",
+
+
+
+ 	"criteria.sin_especificar": "- sin especificar -",
+	"criteria.no": "No",
+	"criteria.si": "Si",
+	"criteria.predefinidos": "Filtros predefinidos",
+	"criteria.estado": "Estado",
+	"criteria.anio": "Año",
+	"criteria.fecha": "Fecha",
+
+    "xxx": "yyy"
+
+
+}

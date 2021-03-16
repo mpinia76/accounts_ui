@@ -1,0 +1,5 @@
+<rasty specificationClass="Accounts\UI\layouts\AccountsLoginMetroLayout" templateLocation="AccountsLoginMetroLayout.htm">
+<component id="footer" type="FooterAccounts">
+	</component>
+
+</rasty>

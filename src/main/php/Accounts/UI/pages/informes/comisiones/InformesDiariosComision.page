@@ -1,0 +1,13 @@
+<rasty specificationClass="Accounts\UI\pages\informes\comisiones\InformesDiariosComision" templateLocation="pages/informes/comisiones/InformesDiariosComision.htm">
+
+	<param name="layoutType" value="str:AccountsMetroLayout" />
+
+	<component id="informesComisionFilter" type="InformeDiarioComisionFilter">
+		<param name="gridModelClazz" value="modelClazz" />
+		<param name="uicriteriaClazz" value="uicriteriaClazz" />
+		<param name="legend" value="msg:informeDiarioComision.buscar" />
+		<param name="legendAgain" value="msg:informeDiarioComision.buscar.again" />
+		<param name="resultDiv" value="str:searchdiv" />
+	</component>
+
+</rasty>

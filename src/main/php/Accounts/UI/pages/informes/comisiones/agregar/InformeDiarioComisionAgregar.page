@@ -1,0 +1,14 @@
+<rasty specificationClass="Accounts\UI\pages\informes\comisiones\agregar\InformeDiarioComisionAgregar" templateLocation="pages/informes/comisiones/agregar/InformeDiarioComisionAgregar.htm">
+
+	<param name="layoutType" value="str:AccountsMetroLayout" />
+
+	<component id="informeDiarioComisionForm" type="InformeDiarioComisionForm">
+		<param name="legend" value="msg:informeDiarioComision.agregar.legend" />
+		<param name="backToOnSuccess" value="get:backTo" />
+		<param name="backToOnCancel" value="get:backTo" />
+		<param name="action" value="linkActionAgregarInformeDiarioComision" />
+		<param name="method" value="str:post" />
+		<param name="informeDiarioComision" value="informeDiarioComision" />
+	</component>
+
+</rasty>

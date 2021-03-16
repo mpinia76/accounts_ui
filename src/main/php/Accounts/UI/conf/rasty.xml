@@ -1,0 +1,186 @@
+<rasty-application>
+
+	<!-- declaración de las páginas -->
+	<page name="Login" location="pages/login/Login.page" url="login"/>
+
+	<page name="CajaHome"   location="pages/home/CajaHome.page" url="caja/home"/>
+	<page name="AdminHome"   location="pages/home/AdminHome.page" url="admin/home"/>
+
+    <page name="Sites"   location="pages/sites/Sites.page" url="sites"/>
+    <page name="SiteAgregar"   location="pages/sites/agregar/SiteAgregar.page" url="sites/agregar"/>
+    <page name="SiteModificar"   location="pages/sites/modificar/SiteModificar.page" url="sites/modificar"/>
+    <page name="UsuarioAsignar"   location="pages/sites/usuarios/UsuarioAsignar.page" url="sites/asignar"/>
+    <page name="UsuarioConsultar"   location="pages/sites/usuarios/UsuarioConsultar.page" url="sites/consultar"/>
+
+
+    <page name="AbrirCaja"   location="pages/caja/abrir/AbrirCaja.page" url="caja/abrir"/>
+	<page name="CerrarCaja"   location="pages/caja/cerrar/CerrarCaja.page" url="caja/cerrar"/>
+	<page name="SeleccionarCaja"   location="pages/caja/seleccionar/SeleccionarCaja.page" url="caja/seleccionar"/>
+	<page name="RetirarEfectivo"   location="pages/caja/retirarEfectivo/RetirarEfectivo.page" url="caja/retirarEfectivo"/>
+	<page name="RendirCaja"   location="pages/caja/rendir/RendirCaja.page" url="caja/rendir"/>
+	<page name="IngresarEfectivo"   location="pages/caja/ingresarEfectivo/IngresarEfectivo.page" url="caja/ingresarEfectivo"/>
+
+	<page name="ConceptoGastos"   location="pages/conceptoGastos/ConceptoGastos.page" url="conceptoGastos"/>
+	<page name="ConceptoGastoAgregar"   location="pages/conceptoGastos/agregar/ConceptoGastoAgregar.page" url="conceptoGastos/agregar"/>
+	<page name="ConceptoGastoModificar"   location="pages/conceptoGastos/modificar/ConceptoGastoModificar.page" url="conceptoGastos/modificar"/>
+
+    <page name="Bancos"   location="pages/bancos/Bancos.page" url="cuentas"/>
+    <page name="BancoAgregar"   location="pages/bancos/agregar/BancoAgregar.page" url="cuentas/agregar"/>
+    <page name="BancoModificar"   location="pages/bancos/modificar/BancoModificar.page" url="cuentas/modificar"/>
+
+
+    <page name="MovimientosCajaActual"   location="pages/caja/MovimientosCajaActual.page" url="caja/actual/movimientos"/>
+	<page name="MovimientosCajaChica"   location="pages/cajaChica/MovimientosCajaChica.page" url="cajaChica/movimientos"/>
+
+	<page name="MovimientosBanco"   location="pages/bancos/MovimientosBanco.page" url="movimientos"/>
+
+
+	<page name="Gastos"   location="pages/gastos/Gastos.page" url="gastos"/>
+	<page name="GastoAgregar"   location="pages/gastos/agregar/GastoAgregar.page" url="gastos/agregar"/>
+	<page name="GastoPagar"   location="pages/gastos/pagar/GastoPagar.page" url="gastos/pagar"/>
+	<page name="GastoAnular"   location="pages/gastos/anular/GastoAnular.page" url="gastos/anular"/>
+
+
+	<page name="InformesSemanales"   location="pages/informes/semanal/InformesSemanales.page" url="informes/semanales"/>
+	<page name="InformeSemanalAgregar"   location="pages/informes/semanal/agregar/InformeSemanalAgregar.page" url="informes/semanales/agregar"/>
+	<page name="InformeSemanalModificar"   location="pages/informes/semanal/modificar/InformeSemanalModificar.page" url="informes/semanales/modificar"/>
+	<page name="InformeSemanalStats"   location="pages/informes/semanal/stats/InformeSemanalStats.page" url="informes/semanales/stats"/>
+
+
+
+	<page name="DepositarEfectivo"   location="pages/bancos/depositar/DepositarEfectivo.page" url="depositar"/>
+
+
+
+	<page name="Transferir"   location="pages/cuentas/transferir/Transferir.page" url="transferir"/>
+
+
+
+	<page name="BalanceDia"   location="pages/balances/BalanceDia.page" url="balances/dia"/>
+	<page name="BalanceCajas"   location="pages/balances/BalanceCajas.page" url="balances/cajas"/>
+	<page name="BalanceMes"   location="pages/balances/BalanceMes.page" url="balances/mes"/>
+	<page name="BalanceAnio"   location="pages/balances/BalanceAnio.page" url="balances/anio"/>
+
+	<page name="Reportes"   location="pages/reportes/Reportes.page" url="reportes"/>
+
+
+
+
+	<page name="Pagos"   location="pages/pagos/Pagos.page" url="pagos"/>
+	<page name="PagoAnular"   location="pages/pagos/anular/PagoAnular.page" url="pagos/anular"/>
+
+	<!-- declaración de los componentes -->
+	<component name="HeaderNav" location="components/header" />
+	<component name="HeaderNavMetro" location="components/header" />
+
+	<component name="FooterAccounts" location="components/footer" />
+
+
+	<component name="TotalesCaja" location="components/stats/caja" />
+	<component name="UltimosMovimientos" location="components/stats/movimientos" />
+
+
+
+	<component name="InformeSemanalPorMes" location="components/stats/informes" />
+	<component name="InformeSemanalPorSemana" location="components/stats/informes" />
+
+
+	<component name="GastosAnio" location="components/stats/gastos" />
+
+	<!-- forms -->
+
+    <component name="SiteForm"   location="components/form/site"/>
+    <component name="SiteUsuariosForm"   location="components/form/site"/>
+
+	<component name="ConceptoGastoForm"   location="components/form/conceptoGasto"/>
+	<component name="CajaForm"   location="components/form/caja"/>
+
+	<component name="GastoForm"   location="components/form/gasto"/>
+	<component name="InformeSemanalForm"   location="components/form/informeSemanal"/>
+
+    <component name="BancoForm"   location="components/form/banco"/>
+
+	<!-- filters -->
+    <component name="SiteFilter"   location="components/filter/site"/>
+
+	<component name="ConceptoGastoFilter"   location="components/filter/conceptoGasto"/>
+	<component name="MovimientoCajaFilter"   location="components/filter/movimiento"/>
+	<component name="GastoFilter"   location="components/filter/gasto"/>
+
+    <component name="BancoFilter"   location="components/filter/banco"/>
+
+	<component name="InformeSemanalFilter"   location="components/filter/informeSemanal"/>
+
+	<component name="MovimientoCuentaFilter"   location="components/filter/movimiento"/>
+	<component name="MovimientoBancoFilter"   location="components/filter/movimiento"/>
+	<component name="PagoFilter"   location="components/filter/pago"/>
+
+	<component name="CajaBox"   location="components/boxes/caja"/>
+	<component name="GastoBox"   location="components/boxes/gasto"/>
+	<component name="BancoBox"   location="components/boxes/banco"/>
+	<component name="PagoBox"   location="components/boxes/pago"/>
+
+	<component name="BalanceDia"   location="components/stats/balance"/>
+	<component name="BalanceCajas"   location="components/stats/balance"/>
+	<component name="BalanceMes"   location="components/stats/balance"/>
+	<component name="BalanceAnio"   location="components/stats/balance"/>
+
+	<!-- layouts -->
+	<component name="AccountsMetroLayout" location="layouts" />
+	<component name="AccountsLoginMetroLayout" location="layouts" />
+	<component name="AccountsHomeMetroLayout" location="layouts" />
+	<component name="AccountsSorteoLayout" location="layouts" />
+    <component name="RastySecurityLayout" location="layouts" />
+    <component name="RastyCatalogoLayout" location="layouts" />
+
+
+	<!-- declaración de las actions -->
+	<action name="Login" class="Accounts\UI\actions\login\Login" url="login"/>
+	<action name="Logout" class="Accounts\UI\actions\login\Logout" url="logout"/>
+
+
+    <action name="AgregarSite" class="Accounts\UI\actions\sites\AgregarSite" url="sites/agregar"/>
+    <action name="ModificarSite" class="Accounts\UI\actions\sites\ModificarSite" url="sites/modificar"/>
+    <action name="EliminarSite" class="Accounts\UI\actions\sites\EliminarSite" url="sites/eliminar"/>
+    <action name="AsignarUsuariosSite" class="Accounts\UI\actions\sites\AsignarUsuariosSite" url="sites/asignar"/>
+
+
+    <action name="AbrirCaja" class="Accounts\UI\actions\caja\AbrirCaja" url="caja/abrir"/>
+	<action name="CerrarCaja" class="Accounts\UI\actions\caja\CerrarCaja" url="caja/cerrar"/>
+	<action name="SeleccionarCaja" class="Accounts\UI\actions\caja\SeleccionarCaja" url="caja/seleccionar"/>
+	<action name="RetirarEfectivo" class="Accounts\UI\actions\caja\RetirarEfectivo" url="caja/retirarEfectivo"/>
+	<action name="IngresarEfectivo" class="Accounts\UI\actions\caja\IngresarEfectivo" url="caja/ingresarEfectivo"/>
+
+	<action name="AgregarConceptoGasto" class="Accounts\UI\actions\conceptoGastos\AgregarConceptoGasto" url="conceptoGastos/agregar"/>
+	<action name="ModificarConceptoGasto" class="Accounts\UI\actions\conceptoGastos\ModificarConceptoGasto" url="conceptoGastos/modificar"/>
+	<action name="EliminarConceptoGasto" class="Accounts\UI\actions\conceptoGastos\EliminarConceptoGasto" url="conceptoGastos/eliminar"/>
+
+    <action name="AgregarBanco" class="Accounts\UI\actions\bancos\AgregarBanco" url="cuentas/agregar"/>
+    <action name="ModificarBanco" class="Accounts\UI\actions\bancos\ModificarBanco" url="cuentas/modificar"/>
+    <action name="EliminarBanco" class="Accounts\UI\actions\bancos\EliminarBanco" url="cuentas/eliminar"/>
+
+
+    <action name="AgregarGasto" class="Accounts\UI\actions\gastos\AgregarGasto" url="gastos/agregar"/>
+	<action name="PagarGasto" class="Accounts\UI\actions\gastos\PagarGasto" url="gastos/pagar"/>
+	<action name="AnularGasto" class="Accounts\UI\actions\gastos\AnularGasto" url="gastos/anular"/>
+
+	<action name="AgregarInformeSemanal" class="Accounts\UI\actions\informes\semanal\AgregarInformeSemanal" url="informes/semanal/agregar"/>
+	<action name="ModificarInformeSemanal" class="Accounts\UI\actions\informes\semanal\ModificarInformeSemanal" url="informes/semanal/modificar"/>
+
+
+	<action name="DepositarEfectivo" class="Accounts\UI\actions\bancos\DepositarEfectivo" url="cuentas/depositar"/>
+
+
+	<action name="Transferir" class="Accounts\UI\actions\cuentas\Transferir" url="cuentas/transferir"/>
+
+
+	<action name="AnularPago" class="Accounts\UI\actions\pagos\AnularPago" url="pagos/anular"/>
+
+	<action name="findEntities" class="Accounts\UI\actions\common\ListarEntitiesJson" url="findEntities"/>
+	<action name="findEntity" class="Accounts\UI\actions\common\GetEntityJson" url="findEntity"/>
+
+	<action name="FbMessenger" class="Accounts\UI\actions\fb\FbMessenger" url="webhook"/>
+
+
+
+</rasty-application>

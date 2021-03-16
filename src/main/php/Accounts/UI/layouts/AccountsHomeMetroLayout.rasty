@@ -1,0 +1,8 @@
+<rasty specificationClass="Accounts\UI\layouts\AccountsHomeMetroLayout" templateLocation="AccountsHomeMetroLayout.htm">
+
+
+    		<param name="pageMenuGroups" value="menuGroups" />
+
+	<component id="footer" type="FooterAccounts">
+	</component>
+</rasty>

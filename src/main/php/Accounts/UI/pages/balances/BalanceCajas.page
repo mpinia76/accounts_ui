@@ -1,0 +1,10 @@
+<rasty specificationClass="Accounts\UI\pages\balances\BalanceCajas" templateLocation="pages/balances/BalanceCajas.htm">
+
+	<param name="layoutType" value="str:AccountsMetroLayout" />
+	<param name="strFecha" value="get:fecha" />
+
+	<component id="balance" type="BalanceCajas">
+		<param name="fecha" value="fecha" />
+	</component>
+
+</rasty>

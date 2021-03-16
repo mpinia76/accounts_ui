@@ -1,0 +1,72 @@
+<rasty specificationClass="Accounts\UI\components\form\site\SiteForm" templateLocation="SiteForm.htm">
+
+	<param name="error" value="get:error" />
+
+	<component id="backSuccess" type="InputHidden">
+		<param name="inputId" value="str:backToOnSuccess" />
+		<param name="name" value="str:backToOnSuccess" />
+		<param name="value" value="backToOnSuccess" />
+	</component>
+
+	<component id="oid" type="InputHidden">
+		<param name="inputId" value="str:oid" />
+		<param name="name" value="str:oid" />
+		<param name="value" value="site.oid" />
+	</component>
+
+
+
+	<component id="nombre" type="InputText">
+    		<param name="inputId" value="str:nombre" />
+    		<param name="name" value="str:nombre" />
+    		<param name="value" value="site.nombre" />
+    		<param name="requiredMessage" value="msg:site.nombre.required" />
+    		<param name="placeholder" value="msg:site.nombre" />
+    		<param name="autocomplete" value="str:off" />
+
+    	</component>
+
+    <component id="mail" type="InputText">
+    		<param name="inputId" value="str:mail" />
+    		<param name="name" value="str:mail" />
+    		<param name="value" value="site.mail" />
+    		<param name="requiredMessage" value="msg:site.mail.required" />
+    		<param name="placeholder" value="msg:site.mail" />
+
+    		<param name="invalidEmailMessage" value="msg:site.mail.invalid" />
+    	</component>
+
+
+    <component id="description" type="InputTextArea">
+        		<param name="inputId" value="str:description" />
+        		<param name="name" value="str:description" />
+        		<param name="value" value="site.description" />
+
+        		<param name="placeholder" value="msg:site.description" />
+        		<param name="autocomplete" value="str:off" />
+
+        	</component>
+
+        <component id="logo" type="InputHidden">
+        		<param name="inputId" value="str:logo" />
+        		<param name="name" value="str:logo" />
+        		<param name="value" value="site.logo" />
+        	</component>
+
+
+        <component id="uploadImage" type="UploadImage">
+        		<param name="uploadPath" value="uploadPath" />
+        		<param name="uploadWebPath" value="uploadWebPath" />
+        		<param name="uploadSuccessCallback" value="str: logoSiteNewImage " />
+        		<param name="thumbnailSuccessCallback" value="str: logoSiteNewThumbnail" />
+        		<param name="imageWidth" value="str: 80px " />
+        		<param name="thumbnailWidth" value="str: 150 " />
+        		<param name="thumbnailHeight" value="str: 150 " />
+
+        	</component>
+
+
+
+
+
+</rasty>

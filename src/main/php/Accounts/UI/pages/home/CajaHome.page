@@ -1,0 +1,15 @@
+<rasty specificationClass="Accounts\UI\pages\home\CajaHome" templateLocation="pages/home/CajaHome.htm">
+
+	<param name="layoutType" value="str:AccountsHomeMetroLayout" />
+
+	<component id="caja" type="CajaBox">
+		<param name="caja" value="caja" />
+	</component>
+
+
+	<!-- <component id="ultimosMovimientosCaja" type="UltimosMovimientos">
+		<param name="cuenta" value="caja" />
+		<param name="cantidad" value="str:10" /> -->
+	</component>
+
+</rasty>

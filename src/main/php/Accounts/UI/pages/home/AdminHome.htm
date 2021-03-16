@@ -1,0 +1,83 @@
+<!-- BEGIN: main-->
+<style>
+.totales-data-subtitle{
+	color: inherit;
+    display: block;
+    font-size: 12pt;
+}
+.totales-data-title{
+	color: inherit;
+    display: block;
+    font-size: 14pt;
+    text-align: right;
+    padding: 5px;
+}
+</style>
+
+<div class="cd-content-wrapper">
+    <div class="text-component text-center">
+        <div class="tile-group double">
+
+        <div class="tile-group-title">{menu_gastos}</div>
+
+        <a data-effect="slideUp" href="{linkGastos}" data-role="live-tile" class="tile double bg-grey live">
+            <!-- BEGIN:gasto -->
+            <div class="tile-content email">
+                <div class="email-image">
+                </div>
+                <div class="email-data">
+                    <span class="email-data-title">{titulo}</span>
+                    <span class="email-data-subtitle">{subtitulo}</span>
+                    <span class="email-data-text">{descripcion}</span>
+                </div>
+            </div>
+            <!-- END: gasto -->
+            <!-- BEGIN:sin_gasto -->
+            <div class="tile-content email">
+                <div class="email-image">
+                </div>
+                <div class="email-data">
+                    <span class="email-data-title">{titulo}</span>
+                </div>
+            </div>
+            <!-- END: sin_gasto -->
+            <div class="brand">
+                <div class="label"><h3 class="no-margin fg-white"><span class="icon-calendar"></span></h3></div>
+                <div class="badge bg-red">{total_gastos}</div>
+
+            </div>
+        </a> <!-- end tile vencimientos-->
+
+
+    </div> <!-- End group --><div class="tile-group double">
+        <div class="tile-group-title">{menu_cuentas}</div>
+        <a class="tile double bg-grey" href="{linkMovimientosBanco}">
+            <div class="tile-content">
+                <div class="padding10">
+                    <h1 class="fg-white ntm">{menu_bancos}</h1>
+                </div>
+            </div>
+            <div class="brand bg-grey fg-white" style="text-align: right;">
+					<span class="text" style="font-size:19pt;">
+						{saldo_bancos}
+					</span>
+            </div>
+        </a>
+        <!-- BEGIN:cuenta_banco -->
+        <a class="tile bg-grey" href="{linkMovimientosBanco}">
+            <div class="tile-content">
+                <div class="padding10">
+                    <h1 class="fg-white ntm">{menu_cuenta}</h1>
+                </div>
+            </div>
+            <div class="brand bg-grey fg-white" style="text-align: right;">
+					<span class="text" style="font-size:16pt;">
+						{saldo_cuenta}
+					</span>
+            </div>
+        </a>
+        <!-- END:cuenta_banco -->
+    </div>
+    </div> <!-- .content-wrapper -->
+
+<!-- END: main-->

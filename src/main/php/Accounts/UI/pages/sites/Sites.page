@@ -1,0 +1,13 @@
+<rasty specificationClass="Accounts\UI\pages\sites\Sites" templateLocation="pages/sites/Sites.htm">
+
+	<param name="layoutType" value="str:AccountsMetroLayout" />
+
+	<component id="sitesFilter" type="SiteFilter">
+		<param name="gridModelClazz" value="modelClazz" />
+		<param name="uicriteriaClazz" value="uicriteriaClazz" />
+		<param name="legend" value="msg:site.buscar" />
+		<param name="legendAgain" value="msg:site.buscar.again" />
+		<param name="resultDiv" value="str:searchdiv" />
+	</component>
+
+</rasty>

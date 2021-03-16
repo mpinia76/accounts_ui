@@ -1,0 +1,12 @@
+<rasty specificationClass="Accounts\UI\layouts\AccountsMetroLayout" templateLocation="AccountsMetroLayout.htm">
+
+	<param name="menuGroups" value="menuGroups" />
+
+	<component id="header" type="HeaderNavMetro">
+		<param name="pageMenuGroups" value="menuGroups" />
+	</component>
+
+	<component id="footer" type="FooterAccounts">
+	</component>
+
+</rasty>

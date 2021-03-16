@@ -1,0 +1,16 @@
+<rasty specificationClass="Accounts\UI\pages\sites\usuarios\UsuarioAsignar" templateLocation="pages/sites/usuarios/UsuarioAsignar.htm">
+
+	<param name="layoutType" value="str:AccountsMetroLayout" />
+	<param name="siteOid" value="get:oid" />
+
+
+	<component id="siteUsuariosForm" type="SiteUsuariosForm">
+		<param name="legend" value="msg:site.asignarUsuarios.legend" />
+		<param name="action" value="linkActionAsignarUsuariosSite" />
+		<param name="method" value="str:post" />
+		<param name="backToOnSuccess" value="get:backTo" />
+		<param name="backToOnCancel" value="get:backTo" />
+		<param name="site" value="site" />
+	</component>
+
+</rasty>

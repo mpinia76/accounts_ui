@@ -1,0 +1,14 @@
+<rasty specificationClass="Accounts\UI\pages\sites\agregar\SiteAgregar" templateLocation="pages/sites/agregar/SiteAgregar.htm">
+
+	<param name="layoutType" value="str:AccountsMetroLayout" />
+
+	<component id="siteForm" type="SiteForm">
+		<param name="legend" value="msg:site.agregar.legend" />
+		<param name="backToOnSuccess" value="get:backTo" />
+		<param name="backToOnCancel" value="get:backTo" />
+		<param name="action" value="linkActionAgregarSite" />
+		<param name="method" value="str:post" />
+		<param name="site" value="site" />
+	</component>
+
+</rasty>

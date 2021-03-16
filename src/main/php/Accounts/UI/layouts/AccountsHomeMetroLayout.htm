@@ -1,0 +1,77 @@
+<!-- BEGIN: main-->
+<!DOCTYPE html>
+<html>
+<head>
+<title>{title}</title>
+
+<link href="{WEB_PATH}css/images/favicon.png" type="image/png" rel="icon">
+
+<!-- BEGIN: meta_tag -->
+<meta http-equiv='{http_equiv}' content='{meta_content}'  name='{name}'/>
+<!-- END: meta_tag -->
+
+<!–[if lt IE 9]>
+<script src="{WEB_PATH}js/css3-mediaqueries.js"></script>
+<![endif]–>
+
+<!-- BEGIN: style -->
+<link rel="stylesheet" href="{css}" type="text/css" />
+<!-- END: style -->
+
+<!-- BEGIN: link -->
+<link rel="{rel}" href="{href}" type="{type}" />
+<!-- END: link -->
+
+<!-- BEGIN: script -->
+<script language="javascript" src="{js}"></script>
+<!-- END: script -->
+<script type="text/javascript">
+
+function showInfoMessage( msg, hide ){
+	$( "#layout_info_message" ).html( msg );
+	updated_right = ($(window).width() / 2) - ($( "#layout_info" ).width()/2);
+	$( "#layout_info" ).css({'right': updated_right});
+
+	if( hide )
+		$( "#layout_info" ).show().delay(4000).slideUp(300);
+	else
+		$( "#layout_info" ).show();
+}
+
+function showErrorMessage( msg, hide ){
+
+
+
+	$( "#layout_error_message" ).html( msg );
+	updated_right = ($(window).width() / 2) - ($( "#layout_error" ).width()/2);
+	$( "#layout_error" ).css({'right': updated_right});
+
+	updated_top = ($(window).height() / 2) - ($( "#layout_error" ).height()/2);
+	$( "#layout_error" ).css({'top': updated_top});
+
+	if( hide )
+		$( "#layout_error" ).show().delay(4000).slideUp(300);
+	else
+		$( "#layout_error" ).show();
+
+}
+
+</script>
+</head>
+<BODY class="rasty metro">
+<rasty id="header"/>
+
+
+        {page}
+
+
+    <rasty id="footer"/>
+
+</main> <!-- .cd-main-content -->
+
+    <script src="{WEB_PATH}assets/js/util.js"></script> <!-- util functions included in the CodyHouse framework -->
+    <script src="{WEB_PATH}assets/js/menu-aim.js"></script>
+    <script src="{WEB_PATH}assets/js/main.js"></script>
+</BODY>
+</html>
+<!-- END: main-->

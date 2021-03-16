@@ -1,0 +1,5 @@
+<rasty specificationClass="Accounts\UI\components\boxes\pago\PagoBox" templateLocation="PagoBox.htm">
+
+	<param name="pagoOid" value="get:pagoOid" />
+
+</rasty>
