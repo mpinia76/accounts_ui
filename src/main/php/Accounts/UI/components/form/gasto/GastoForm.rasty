@@ -53,12 +53,14 @@
 
 
 
-	<component id="observaciones" type="InputText">
+	<component id="observaciones" type="InputTextArea">
 		<param name="inputId" value="str:observaciones" />
 		<param name="name" value="str:observaciones" />
 		<param name="value" value="gasto.observaciones" />
 		<param name="placeholder" value="msg:gasto.observaciones.placeholder" />
 		<param name="autocomplete" value="str:off" />
 	</component>
+
+
 
 </rasty>
