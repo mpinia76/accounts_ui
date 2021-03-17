@@ -20,11 +20,11 @@ class ConceptoGastoAgregar extends AccountsPage{
 	public function __construct(){
 
 		//inicializamos el ConceptoGasto.
-		$ConceptoGasto = new ConceptoGasto();
+		$conceptoGasto = new ConceptoGasto();
 
 		//$ConceptoGasto->setNombre("Bernardo");
 		//$ConceptoGasto->setEmail("ber@mail.com");
-		$this->setConceptoGasto($ConceptoGasto);
+		$this->setConceptoGasto($conceptoGasto);
 
 
 	}

@@ -42,14 +42,17 @@ class HeaderNavMetro extends HeaderNav{
 		$xtpl->assign("menu_main", $this->localize("menu.main"));
 
 		$xtpl->assign("reloadLabel", $this->localize("menu.main.reload"));
-
+        $xtpl->assign("linkHome", LinkBuilder::getPageUrl( "AdminHome") );
 		if( AccountsUIUtils::isAdminLogged()) {
 			$xtpl->assign("homeLabel", $this->localize("menu.main.panel"));
-			$xtpl->assign("linkHome", LinkBuilder::getPageUrl( "AdminHome") );
+
+            $xtpl->assign("logo", AccountsUIUtils::getWebPath(). "/css/images/cajaChica_48.png");
 			$xtpl->parse("main.menu_home");
 		}else{
-			$xtpl->assign("homeLabel", $this->localize("menu.main.panel"));
-			$xtpl->assign("linkHome", LinkBuilder::getPageUrl( "CajaHome") );
+		    $site = AccountsUIUtils::getAdminSiteLogged();
+            $xtpl->assign("homeLabel", $site);
+
+            $xtpl->assign("logo", AccountsUIUtils::getLogoSite($site));
 			$xtpl->parse("main.menu_home");
 		}
 
@@ -199,13 +202,13 @@ class HeaderNavMetro extends HeaderNav{
 
 	public function parseMenuProfile( XTemplate $xtpl, $user){
 
-//		$menuOption = new MenuOption();
-//		$menuOption->setLabel( $this->localize( "menu.profile") );
+		$menuOption = new MenuOption();
+		$menuOption->setLabel( $this->localize( "menu.profile") );
 //		$menuOption->setIconClass( "icon-cog" );
-//		$menuOption->setPageName( "UserProfile");
-//		$menuOption->addParam("oid",$user->getOid());
+		$menuOption->setPageName( "UsuarioEditar");
+		$menuOption->addParam("oid",$user->getOid());
 //		$menuOption->setImageSource( $this->getWebPath() . "css/images/profile.png" );
-//		$this->parseMenuOption($xtpl, $menuOption, "main.menuOptionProfile");
+		$this->parseMenuOption($xtpl, $menuOption, "main.menuOptionProfile");
 
 
 

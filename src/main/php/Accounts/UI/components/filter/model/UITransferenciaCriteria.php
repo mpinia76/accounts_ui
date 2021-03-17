@@ -4,6 +4,7 @@ namespace Accounts\UI\components\filter\model;
 
 use Accounts\UI\components\filter\model\UIAccountsCriteria;
 
+use Accounts\UI\utils\AccountsUIUtils;
 use Rasty\utils\RastyUtils;
 use Accounts\Core\criteria\TransferenciaCriteria;
 
@@ -26,10 +27,30 @@ class UITransferenciaCriteria extends UIAccountsCriteria{
 
 	private $fechaHasta;
 
+    private $site;
+
+    /**
+     * @return mixed
+     */
+    public function getSite()
+    {
+        return $this->site;
+    }
+
+    /**
+     * @param mixed $site
+     */
+    public function setSite($site)
+    {
+        $this->site = $site;
+    }
+
 	public function __construct(){
 
 		parent::__construct();
-
+        if (AccountsUIUtils::isAdminSiteLogged()){
+            $this->setSite(AccountsUIUtils::getAdminSiteLogged());
+        }
 	}
 
 	protected function newCoreCriteria(){

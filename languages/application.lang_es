@@ -31,7 +31,7 @@
 
     "menu.seguridad":"Seguridad",
 
-
+    "menu.profile":"Editar usuario",
 
     "menu.usuarios":"Usuarios",
     "menu.usuarios.agregar":"Nuevo Usuario",
@@ -300,7 +300,7 @@
 	"login.ingrese_password":"Ingrese una clave",
 	"login.site":"Sitio",
 	"login.ingrese_site":"Ingrese un sitio",
-	
+
 	"login.ingresar":"Comenzar!",
 	"login.invalid_password": "La clave ingresada no es válida",
 	"login.user_not_found": "El usuario ingresado no es válido",

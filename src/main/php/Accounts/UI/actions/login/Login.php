@@ -40,14 +40,14 @@ class Login extends Action{
 			$username = RastyUtils::getParamPOST("username");
 			$password = RastyUtils::getParamPOST("password");
 			$site_oid = RastyUtils::getParamPOST("site_oid");
-			
+
 			if(empty($username))
 				throw new RastyException("username.required");
-			
+
 			if(empty($password))
 				throw new RastyException("password.required");
-			
-			
+
+
 			RastySecurityContext::login( RastyUtils::getParamPOST("username"), RastyUtils::getParamPOST("password") );
 
 
@@ -56,10 +56,11 @@ class Login extends Action{
 
 			$user = AccountsUtils::getUserByUsername($user->getUsername());
 
-			if( AccountsUtils::isAdmin($user)){
+			if( !$site_oid){
+                if( AccountsUtils::isAdmin($user)) {
 
-
-				AccountsUIUtils::loginAdmin($user);
+                    AccountsUIUtils::loginAdmin($user);
+                }
 
 			}else{
 
@@ -76,7 +77,7 @@ class Login extends Action{
 
 			else //si no hay caja abierta, lo enviamos a abrir una nueva.
 				$forward->setPageName( $this->getForwardAdmin() );*/
-			
+
 			$forward->setPageName( $this->getForwardAdmin() );
 
 		} catch (RastyException $e) {
@@ -96,7 +97,7 @@ class Login extends Action{
 		return "AdminHome";
 	}
 
-	
+
 
 	protected function getErrorForward(){
 		return "Login";

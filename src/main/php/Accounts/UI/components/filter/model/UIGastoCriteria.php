@@ -5,6 +5,7 @@ namespace Accounts\UI\components\filter\model;
 use Accounts\UI\components\filter\model\UIAccountsCriteria;
 use Accounts\Core\utils\AccountsUtils;
 
+use Accounts\UI\utils\AccountsUIUtils;
 use Rasty\utils\RastyUtils;
 use Accounts\Core\criteria\GastoCriteria;
 
@@ -48,12 +49,33 @@ class UIGastoCriteria extends UIAccountsCriteria{
 
 	private $estadosNotIn;
 
+    private $site;
+
+    /**
+     * @return mixed
+     */
+    public function getSite()
+    {
+        return $this->site;
+    }
+
+    /**
+     * @param mixed $site
+     */
+    public function setSite($site)
+    {
+        $this->site = $site;
+    }
+
 
 	public function __construct(){
 
 		parent::__construct();
 
-		$this->setFiltroPredefinido( self::POR_VENCER );
+		//$this->setFiltroPredefinido( self::POR_VENCER );
+        if (AccountsUIUtils::isAdminSiteLogged()){
+            $this->setSite(AccountsUIUtils::getAdminSiteLogged());
+        }
 
 	}
 
@@ -74,6 +96,7 @@ class UIGastoCriteria extends UIAccountsCriteria{
 		$criteria->setObservaciones( $this->getObservaciones() );
 		$criteria->setEstadosIn( $this->getEstadosIn() );
 		$criteria->setEstadosNotIn( $this->getEstadosNotIn() );
+        $criteria->setSite( $this->getSite() );
 
 		return $criteria;
 	}

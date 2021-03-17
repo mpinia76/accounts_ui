@@ -73,6 +73,7 @@ class HeaderNav extends RastyComponent{
 
 		//$menuGroup = new MenuGroup();
 		$menuGroups=array();
+        $menuGroups[] = $this->getMenuHome() ;
 		if( AccountsUIUtils::isAdminLogged()) {
 
 			$menuOption = new MenuOption();
@@ -85,13 +86,13 @@ class HeaderNav extends RastyComponent{
 //			$menuGroups[] = $menuOption;
 
 
-            $menuGroups[] = $this->getMenuHome() ;
+
 			$menu = $this->getMenuSeguridad() ;
 			if($menu)
 				$menuGroups[] =  $menu;
 
 
-			
+
 
 
 		}elseif (AccountsUIUtils::isAdminSiteLogged()){

@@ -20,10 +20,10 @@ class BancoAgregar extends AccountsPage{
 	public function __construct(){
 
 		//inicializamos el Banco.
-		$Banco = new Banco();
+		$banco = new Banco();
 
 
-		$this->setBanco($Banco);
+		$this->setBanco($banco);
 
 
 	}

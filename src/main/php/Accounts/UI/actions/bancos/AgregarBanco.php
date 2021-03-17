@@ -7,6 +7,7 @@ use Accounts\UI\components\form\banco\BancoForm;
 use Accounts\UI\service\UIServiceFactory;
 use Accounts\Core\model\Banco;
 
+use Accounts\UI\utils\AccountsUIUtils;
 use Rasty\actions\Action;
 use Rasty\actions\Forward;
 use Rasty\utils\RastyUtils;
@@ -46,10 +47,7 @@ class AgregarBanco extends Action{
 			$bancoForm->fillEntity($banco);
 
             $banco->setFecha( new \Datetime() );
-            /*$banco->setNumero( $banco->getNombre() );
-            $banco->setCbu( '-' );
-            $banco->setTitular( '-' );
-            $banco->setCuit( '-' );*/
+            $banco->setSite(AccountsUIUtils::getAdminSiteLogged());
 
 
 

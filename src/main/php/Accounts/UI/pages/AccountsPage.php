@@ -318,6 +318,12 @@ abstract class AccountsPage extends RastyPage{
 
     }
 
+    public function getLinkActionEditarUsuario(){
+
+        return LinkBuilder::getActionUrl( "EditarUsuario") ;
+
+    }
+
 
 
 

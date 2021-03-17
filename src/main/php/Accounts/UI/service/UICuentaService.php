@@ -5,6 +5,7 @@ use Accounts\UI\components\filter\model\UICuentaCriteria;
 
 use Accounts\UI\components\filter\model\UIEmpleadoCriteria;
 
+use Accounts\UI\utils\AccountsUIUtils;
 use Rasty\components\RastyPage;
 use Rasty\utils\XTemplate;
 use Rasty\i18n\Locale;
@@ -143,7 +144,7 @@ class UICuentaService{
 			$transferencia->setFechaHora( $fechaHora );
 			$transferencia->setObservaciones( $observaciones );
 			$transferencia->setUser( $user );
-
+            $transferencia->setSite(AccountsUIUtils::getAdminSiteLogged());
 			UIServiceFactory::getUITransferenciaService()->add( $transferencia );
 
 		} catch (\Exception $e) {

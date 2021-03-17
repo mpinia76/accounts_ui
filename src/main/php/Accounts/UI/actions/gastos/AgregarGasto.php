@@ -7,6 +7,7 @@ use Accounts\UI\components\form\gasto\GastoForm;
 use Accounts\UI\service\UIServiceFactory;
 use Accounts\Core\model\Gasto;
 
+use Accounts\UI\utils\AccountsUIUtils;
 use Rasty\actions\Action;
 use Rasty\actions\Forward;
 use Rasty\utils\RastyUtils;
@@ -43,7 +44,7 @@ class AgregarGasto extends Action{
 
 			//completados con los datos del formulario.
 			$gastoForm->fillEntity($gasto);
-
+            $gasto->setSite(AccountsUIUtils::getAdminSiteLogged());
 			//agregamos el gasto.
 			UIServiceFactory::getUIGastoService()->add( $gasto );
 

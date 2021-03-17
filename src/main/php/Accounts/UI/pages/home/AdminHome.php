@@ -1,6 +1,7 @@
 <?php
 namespace Accounts\UI\pages\home;
 
+use Accounts\UI\components\filter\model\UIGastoCriteria;
 use Accounts\UI\pages\AccountsPage;
 
 use Accounts\UI\components\filter\model\UIBancoCriteria;
@@ -36,7 +37,14 @@ class AdminHome extends AccountsPage{
 	}
 
 	public function getTitle(){
-		return $this->localize( "admin_home.title" );
+        $title = $this->localize("admin_home.title");
+        $subtitle = $this->localize("admin_home.subtitle");
+
+        if( AccountsUIUtils::isAdminSiteLogged()) {
+            $site = AccountsUIUtils::getAdminSiteLogged();
+            $title = $site;
+        }
+		return $title;
 	}
 
 	public function getMenuGroups(){
@@ -53,8 +61,16 @@ class AdminHome extends AccountsPage{
 
 	protected function parseXTemplate(XTemplate $xtpl){
 
-		$title = $this->localize("admin_home.title");
+
+
+	    $title = $this->localize("admin_home.title");
 		$subtitle = $this->localize("admin_home.subtitle");
+
+		if( AccountsUIUtils::isAdminSiteLogged()) {
+            $site = AccountsUIUtils::getAdminSiteLogged();
+            $title = $site;
+        }
+
 		$xtpl->assign("app_title", $title );
 		//$xtpl->assign("app_subtitle", $subtitle );
 
@@ -116,20 +132,15 @@ class AdminHome extends AccountsPage{
 
 
 
+        $uiCriteria = new UIBancoCriteria() ;
 
 
-		$xtpl->assign("saldo_bancos", AccountsUIUtils::formatMontoToView( UIServiceFactory::getUIBancoService()->getSaldoBancos() ) );
+		$xtpl->assign("saldo_bancos", AccountsUIUtils::formatMontoToView( UIServiceFactory::getUIBancoService()->getSaldoBancos($uiCriteria) ) );
 		$xtpl->assign("linkMovimientosBanco", $this->getLinkMovimientosBanco());
 		$xtpl->assign("menu_baproctacte",'Cta. Cte.' );
-		
-		
-		$user = RastySecurityContext::getUser();
-		
-		$uiCriteria = new UIBancoCriteria() ;
-		
-		if (AccountsUIUtils::isAdminSiteLogged()){
-			$uiCriteria->setSite(AccountsUIUtils::getAdminSiteLogged());
-		}
+
+
+
 
         $bancos = UIServiceFactory::getUIBancoService()->getList($uiCriteria );
 
@@ -191,7 +202,15 @@ class AdminHome extends AccountsPage{
 
 	public function parseGastos( XTemplate $xtpl){
 
-		$gastos = UIServiceFactory::getUIGastoService()->getGastosPorVencer();
+        $user = RastySecurityContext::getUser();
+
+        $uiCriteria = new UIGastoCriteria();
+
+        if (AccountsUIUtils::isAdminSiteLogged()){
+            $uiCriteria->setSite(AccountsUIUtils::getAdminSiteLogged());
+        }
+
+		$gastos = UIServiceFactory::getUIGastoService()->getGastosPorVencer($uiCriteria);
 
 		if(count($gastos) == 0 ){
 			$xtpl->assign("titulo", $this->localize("gastos.por_vencer.vacio") );

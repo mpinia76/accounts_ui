@@ -1,0 +1,79 @@
+<rasty specificationClass="Accounts\UI\components\form\usuario\ProfileForm" templateLocation="ProfileForm.htm">
+
+	<param name="error" value="get:error" />
+
+    	<component id="backSuccess" type="InputHidden">
+    		<param name="inputId" value="str:backToOnSuccess" />
+    		<param name="name" value="str:backToOnSuccess" />
+    		<param name="value" value="backToOnSuccess" />
+    	</component>
+
+    	<component id="oid" type="InputHidden">
+    		<param name="inputId" value="str:oid" />
+    		<param name="name" value="str:oid" />
+    		<param name="value" value="usuario.oid" />
+    	</component>
+
+    	<component id="username" type="InputText">
+    		<param name="inputId" value="str:username" />
+    		<param name="name" value="str:username" />
+    		<param name="value" value="usuario.username" />
+    		<param name="requiredMessage" value="msg:usuario.username.required" />
+    		<param name="placeholder" value="msg:usuario.username" />
+    		<param name="autocomplete" value="str:off" />
+    		<param name="styleCss" value="str:lowercase" />
+    	</component>
+
+    	<component id="name" type="InputText">
+    		<param name="inputId" value="str:name" />
+    		<param name="name" value="str:name" />
+    		<param name="value" value="usuario.name" />
+    		<param name="requiredMessage" value="msg:usuario.name.required" />
+    		<param name="placeholder" value="msg:usuario.name" />
+    		<param name="styleCss" value="str:uppercase" />
+    	</component>
+
+    	<component id="lastname" type="InputText">
+    		<param name="inputId" value="str:lastname" />
+    		<param name="name" value="str:lastname" />
+    		<param name="value" value="usuario.lastname" />
+    		<param name="requiredMessage" value="msg:usuario.lastname.required" />
+    		<param name="placeholder" value="msg:usuario.lastname" />
+    		<param name="styleCss" value="str:uppercase" />
+    	</component>
+
+    	<component id="email" type="InputText">
+    		<param name="inputId" value="str:email" />
+    		<param name="name" value="str:email" />
+    		<param name="value" value="usuario.email" />
+    		<param name="requiredMessage" value="msg:usuario.email.required" />
+    		<param name="placeholder" value="msg:usuario.email" />
+    		<param name="checkEmail" value="str:1" />
+    		<param name="invalidEmailMessage" value="msg:usuario.email.invalid" />
+
+    	</component>
+
+    	<component id="password" type="InputPassword">
+    		<param name="inputId" value="str:password" />
+    		<param name="name" value="str:password" />
+    		<param name="value" value="usuario.password" />
+    		<param name="requiredMessage" value="msg:usuario.password.required" />
+    		<param name="placeholder" value="msg:usuario.password" />
+    		<param name="maxChars" value="str:20" />
+    		<param name="properties" value="claveProperties" />
+    	</component>
+
+    	<component id="passwordRepeat" type="InputPassword">
+    		<param name="inputId" value="str:passwordRepeat" />
+    		<param name="name" value="str:passwordRepeat" />
+    		<param name="value" value="passwordRepeat" />
+    		<param name="requiredMessage" value="msg:usuario.password.repeat.required" />
+    		<param name="placeholder" value="msg:usuario.password.repeat" />
+    		<param name="maxChars" value="str:20" />
+    	</component>
+
+
+
+
+
+</rasty>

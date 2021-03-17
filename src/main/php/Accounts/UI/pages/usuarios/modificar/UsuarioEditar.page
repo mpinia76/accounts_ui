@@ -1,0 +1,16 @@
+<rasty specificationClass="Accounts\UI\pages\usuarios\modificar\UsuarioEditar" templateLocation="pages/usuarios/modificar/UsuarioEditar.htm">
+
+	<param name="layoutType" value="str:AccountsMetroLayout" />
+	<param name="usuarioOid" value="get:oid" />
+
+
+	<component id="profileForm" type="ProfileForm">
+		<param name="legend" value="msg:usuario.modificar.legend" />
+		<param name="action" value="linkActionEditarUsuario" />
+		<param name="method" value="str:post" />
+		<param name="backToOnSuccess" value="get:backTo" />
+		<param name="backToOnCancel" value="get:backTo" />
+		<param name="usuario" value="usuario" />
+	</component>
+
+</rasty>

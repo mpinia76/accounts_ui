@@ -200,13 +200,13 @@ class UIGastoService  implements IEntityGridService{
 	}
 
 
-	public function getGastosPorVencer(){
+	public function getGastosPorVencer($uiCriteria){
 
 		try{
-
+            $criteria = $uiCriteria->buildCoreCriteria() ;
 			$service = ServiceFactory::getGastoService();
 
-			$gastos = $service->getGastosPorVencer( );
+			$gastos = $service->getGastosPorVencer($criteria );
 
 			return $gastos;
 

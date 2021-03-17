@@ -77,36 +77,17 @@ class GastoPagar extends AccountsPage{
 		$xtpl->assign( "lbl_anular", $this->localize( "gasto.anular") );
 		$xtpl->assign( "lbl_pendiente", $this->localize( "forma.pago.pendiente") );
 
-		/*if( AccountsUIUtils::isCajaSelected() ){
-			$xtpl->assign( "linkPagarEfectivo", $this->getLinkActionPagarGasto($this->getGasto(), AccountsUIUtils::getCaja(), $this->getBackTo()) );
-			$xtpl->parse("main.forma_pago_caja");
-		}*/
 
-		if( AccountsUIUtils::isAdminLogged() ){
-			/*$xtpl->assign( "linkPagarCajaChica", $this->getLinkActionPagarGasto($this->getGasto(), AccountsUtils::getCuentaCajaChica(), $this->getBackTo()) );
-			$xtpl->parse("main.forma_pago_cajaChica");*/
 
-            $bancos = UIServiceFactory::getUIBancoService()->getList( new UIBancoCriteria() );
+        $bancos = UIServiceFactory::getUIBancoService()->getList( new UIBancoCriteria() );
 
-            foreach ($bancos as $banco){
-                $xtpl->assign( "linkPagarBAPRO", $this->getLinkActionPagarGasto($this->getGasto(), $banco, $this->getBackTo()) );
-                $xtpl->assign("lbl_bapro",$banco->getNombre());
-                $xtpl->parse("main.forma_pago_bapro");
-            }
+        foreach ($bancos as $banco){
+            $xtpl->assign( "linkPagarBAPRO", $this->getLinkActionPagarGasto($this->getGasto(), $banco, $this->getBackTo()) );
+            $xtpl->assign("lbl_bapro",$banco->getNombre());
+            $xtpl->parse("main.forma_pago_bapro");
+        }
 
-			/*$xtpl->assign( "linkPagarBAPRO", $this->getLinkActionPagarGasto($this->getGasto(), AccountsUtils::getCuentaBAPROCtaCte(), $this->getBackTo()) );
-			$xtpl->assign("lbl_bapro",'Cta. Cte.');
-			$xtpl->parse("main.forma_pago_bapro");
-			$xtpl->assign( "linkPagarBAPRO", $this->getLinkActionPagarGasto($this->getGasto(), AccountsUtils::getCuentaARISTEGUI1(), $this->getBackTo()) );
-			$xtpl->assign("lbl_bapro",'Aristegui 1');
-			$xtpl->parse("main.forma_pago_bapro");
-			$xtpl->assign( "linkPagarBAPRO", $this->getLinkActionPagarGasto($this->getGasto(), AccountsUtils::getCuentaBAPROCajaAhorro(), $this->getBackTo()) );
-			$xtpl->assign("lbl_bapro",'Caja de Ahorro');
-			$xtpl->parse("main.forma_pago_bapro");
-			$xtpl->assign( "linkPagarBAPRO", $this->getLinkActionPagarGasto($this->getGasto(), AccountsUtils::getCuentaARISTEGUI2(), $this->getBackTo()) );
-			$xtpl->assign("lbl_bapro",'Aristegui 2');
-			$xtpl->parse("main.forma_pago_bapro");*/
-		}
+
 
 
 		$xtpl->assign( "linkAnular", $this->getLinkGastoAnular($this->getGasto()) );

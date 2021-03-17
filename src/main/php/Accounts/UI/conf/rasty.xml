@@ -6,11 +6,13 @@
 	<page name="CajaHome"   location="pages/home/CajaHome.page" url="caja/home"/>
 	<page name="AdminHome"   location="pages/home/AdminHome.page" url="admin/home"/>
 
+    <page name="UsuarioEditar"   location="pages/usuarios/modificar/UsuarioEditar.page" url="usuarios/editar"/>
+
     <page name="Sites"   location="pages/sites/Sites.page" url="sites"/>
     <page name="SiteAgregar"   location="pages/sites/agregar/SiteAgregar.page" url="sites/agregar"/>
     <page name="SiteModificar"   location="pages/sites/modificar/SiteModificar.page" url="sites/modificar"/>
     <page name="UsuarioAsignar"   location="pages/sites/usuarios/UsuarioAsignar.page" url="sites/asignar"/>
-    
+
 
     <page name="AbrirCaja"   location="pages/caja/abrir/AbrirCaja.page" url="caja/abrir"/>
 	<page name="CerrarCaja"   location="pages/caja/cerrar/CerrarCaja.page" url="caja/cerrar"/>
@@ -87,7 +89,7 @@
 	<component name="GastosAnio" location="components/stats/gastos" />
 
 	<!-- forms -->
-
+    <component name="ProfileForm"   location="components/form/usuario"/>
     <component name="SiteForm"   location="components/form/site"/>
     <component name="SiteUsuariosForm"   location="components/form/site"/>
 
@@ -138,6 +140,8 @@
 	<action name="Logout" class="Accounts\UI\actions\login\Logout" url="logout"/>
 	<action name="DameSiteJson" class="Accounts\UI\actions\login\DameSiteJson" url="login/dameSiteJson"/>
 
+
+    <action name="EditarUsuario" class="Accounts\UI\actions\usuarios\EditarUsuario" url="usuarios/editar"/>
 
     <action name="AgregarSite" class="Accounts\UI\actions\sites\AgregarSite" url="sites/agregar"/>
     <action name="ModificarSite" class="Accounts\UI\actions\sites\ModificarSite" url="sites/modificar"/>

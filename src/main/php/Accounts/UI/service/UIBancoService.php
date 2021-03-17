@@ -4,6 +4,7 @@ namespace Accounts\UI\service;
 use Accounts\UI\components\filter\model\UIBancoCriteria;
 
 
+use Accounts\UI\utils\AccountsUIUtils;
 use Rasty\components\RastyPage;
 use Rasty\utils\XTemplate;
 use Rasty\i18n\Locale;
@@ -154,7 +155,7 @@ class UIBancoService {
 			$transferencia->setFechaHora( $fechaHora );
 			$transferencia->setObservaciones( $observaciones );
 			$transferencia->setUser( $user );
-
+            $transferencia->setSite(AccountsUIUtils::getAdminSiteLogged());
 			UIServiceFactory::getUITransferenciaService()->add( $transferencia );
 
 		} catch (\Exception $e) {
@@ -168,9 +169,9 @@ class UIBancoService {
 	/**
 	 * retorna los saldos de todos los bancos
 	 */
-	public function getSaldoBancos(){
+	public function getSaldoBancos(UIBancoCriteria $criteria){
 
-		$bancos = $this->getList(new UIBancoCriteria());
+		$bancos = $this->getList($criteria);
 		$saldos = 0;
 		foreach ($bancos as $banco) {
 			$saldos += $banco->getSaldo();

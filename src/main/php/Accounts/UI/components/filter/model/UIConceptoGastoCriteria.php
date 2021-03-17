@@ -20,14 +20,16 @@ use Accounts\UI\utils\AccountsUIUtils;
 class UIConceptoGastoCriteria extends UIAccountsCriteria{
 
 	private $nombre;
-	
+
 	private $site;
 
 	public function __construct(){
 
 		parent::__construct();
-		
-		$this->setSite(AccountsUIUtils::getAdminSiteLogged() );
+
+        if (AccountsUIUtils::isAdminSiteLogged()){
+            $this->setSite(AccountsUIUtils::getAdminSiteLogged());
+        }
 
 	}
 

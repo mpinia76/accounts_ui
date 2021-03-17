@@ -43,10 +43,12 @@ class AgregarConceptoGasto extends Action{
 			//creamos una nueva conceptoGasto.
 			$conceptoGasto = new ConceptoGasto();
 
-			$conceptoGasto->setSite(AccountsUIUtils::getAdminSiteLogged());
-			
+
+
 			//completados con los datos del formulario.
 			$conceptoGastoForm->fillEntity($conceptoGasto);
+
+            $conceptoGasto->setSite(AccountsUIUtils::getAdminSiteLogged());
 
 			//agregamos el conceptoGasto.
 			UIServiceFactory::getUIConceptoGastoService()->add( $conceptoGasto );

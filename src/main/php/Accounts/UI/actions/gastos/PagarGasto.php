@@ -39,7 +39,7 @@ class PagarGasto extends Action{
 		$gastoOid = RastyUtils::getParamGET("gastoOid");
 		$cuentaOid = RastyUtils::getParamGET("cuentaOid");
 
-		$backTo = AccountsUIUtils::isAdminLogged()?"AdminHome":"CajaHome";
+		$backTo = "AdminHome";
 
 		$forward->addParam( "gastoOid", $gastoOid );
 		try {

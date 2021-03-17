@@ -179,7 +179,7 @@ class UICajaService {
 			$transferencia->setFechaHora( new \Datetime() );
 			$transferencia->setObservaciones( $observaciones );
 			$transferencia->setUser( $user );
-
+            $transferencia->setSite(AccountsUIUtils::getAdminSiteLogged());
 			UIServiceFactory::getUITransferenciaService()->add( $transferencia );
 
 		} catch (\Exception $e) {
@@ -267,7 +267,7 @@ class UICajaService {
 			$transferencia->setFechaHora( new \Datetime() );
 			$transferencia->setObservaciones( $observaciones );
 			$transferencia->setUser( $user );
-
+            $transferencia->setSite(AccountsUIUtils::getAdminSiteLogged());
 			UIServiceFactory::getUITransferenciaService()->add( $transferencia );
 
 		} catch (\Exception $e) {

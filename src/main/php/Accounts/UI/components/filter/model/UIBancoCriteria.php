@@ -4,6 +4,7 @@ namespace Accounts\UI\components\filter\model;
 
 use Accounts\UI\components\filter\model\UIAccountsCriteria;
 
+use Accounts\UI\utils\AccountsUIUtils;
 use Rasty\utils\RastyUtils;
 use Accounts\Core\criteria\BancoCriteria;
 
@@ -19,13 +20,18 @@ class UIBancoCriteria extends UIAccountsCriteria{
 
 
 	private $nombre;
-	
+
 	private $site;
 
 
 	public function __construct(){
 
 		parent::__construct();
+
+
+        if (AccountsUIUtils::isAdminSiteLogged()){
+            $this->setSite(AccountsUIUtils::getAdminSiteLogged());
+        }
 
 	}
 
