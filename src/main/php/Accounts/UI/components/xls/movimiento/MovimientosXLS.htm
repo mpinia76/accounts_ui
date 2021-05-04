@@ -1,0 +1,48 @@
+<!-- BEGIN:main -->
+<html>
+
+<head>
+
+  </head>
+<body>
+
+
+
+    <table>
+        <tr>
+            <td colspan="5">
+                <span style="font-size:16pt;font-weight: bold;">{fecha}</span>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="5">
+                <span style="font-size:16pt;font-weight: bold;">Movimientos de la cuenta {cuenta}</span>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="5">
+                <span style="font-size:16pt;font-weight: bold;">{entreFechas}</span>
+            </td>
+        </tr>
+    </table>
+
+
+        <!-- BEGIN:movimientos -->
+
+        <table cellspacing="0" cellpadding="0" border="1">
+
+            <tr><th>{lbl_fecha}</th><th>{lbl_concepto}</th><th>{lbl_haber}</th><th>{lbl_debe}</th><th>{lbl_saldo}</th></tr></thead>
+
+            <!-- BEGIN:detalle -->
+            <tr><td width="80px">{fechaHora}</td><td width="420px">{concepto}</td><td style="text-align: right;">{haber}</td><td style="text-align: right;">{debe}</td><td style="text-align: right;">{saldo}</td></tr>
+            <!-- END:detalle -->
+
+
+        </table>
+
+        <!-- END:movimientos -->
+
+
+</body>
+</html>
+<!-- END:main -->
