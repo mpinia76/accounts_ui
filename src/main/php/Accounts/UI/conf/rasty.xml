@@ -35,6 +35,7 @@
 
 	<page name="MovimientosBanco"   location="pages/bancos/MovimientosBanco.page" url="movimientos"/>
 
+    <page name="MovimientosBancoXLS"   location="pages/bancos/MovimientosBancoXLS.page" url="movimientos/movimientosxls"/>
 
 	<page name="Gastos"   location="pages/gastos/Gastos.page" url="gastos"/>
 	<page name="GastoAgregar"   location="pages/gastos/agregar/GastoAgregar.page" url="gastos/agregar"/>
@@ -126,6 +127,13 @@
 	<component name="BalanceMes"   location="components/stats/balance"/>
 	<component name="BalanceAnio"   location="components/stats/balance"/>
 
+    <!-- pdfs -->
+
+    <component name="MovimientosPDF"   location="components/pdf/movimiento"/>
+
+    <!-- xlss -->
+    <component name="MovimientosXLS"   location="components/xls/movimiento"/>
+
 	<!-- layouts -->
 	<component name="AccountsMetroLayout" location="layouts" />
 	<component name="AccountsLoginMetroLayout" location="layouts" />
@@ -133,6 +141,7 @@
 	<component name="AccountsSorteoLayout" location="layouts" />
     <component name="RastySecurityLayout" location="layouts" />
     <component name="RastyCatalogoLayout" location="layouts" />
+    <component name="AccountsXLSLayout" location="layouts" />
 
 
 	<!-- declaración de las actions -->

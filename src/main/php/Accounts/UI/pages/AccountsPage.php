@@ -324,6 +324,18 @@ abstract class AccountsPage extends RastyPage{
 
     }
 
+    public function getLinkMovimientosPdf(){
+
+        return LinkBuilder::getPdfUrl( "MovimientosPDF") ;
+
+    }
+
+    public function getLinkMovimientosXls(){
+
+        return LinkBuilder::getPageUrl( "MovimientosBancoXLS") ;
+
+    }
+
 
 
 

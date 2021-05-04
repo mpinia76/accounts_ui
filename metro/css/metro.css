@@ -2609,14 +2609,14 @@ h2, h3 {
     display: inline-block;
     font-family: 'Segoe UI Light_','Open Sans Light',Verdana,Arial,Helvetica,sans-serif;
     font-size: 12pt;
-    height: 92px;
+    /*height: 92px;*/
     line-height: 16px;
     outline: 0 none;
     padding: 4px 12px;
     position: relative;
     text-align: center;
     vertical-align: middle !important;
-    width: 92px;
+    /*width: 92px;*/
 }
 .metro .shortcut.default {
     background-color: #008287;

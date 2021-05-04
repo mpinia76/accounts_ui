@@ -1,5 +1,16 @@
 <!-- BEGIN: main-->
 <script>
+    function listarMovimientos(  ){
+        $("#input_submit_ajax_Movimiento").click();
+        window.open('{linkPdf}','_blank');
+
+    }
+    function listarMovimientosXLS(  ){
+        $("#input_submit_ajax_Movimiento").click();
+        window.location.href='{linkXls}'
+
+
+    }
 </script>
 <style>
 </style>
@@ -10,7 +21,26 @@
 
         <rasty id="movimientosFilter" />
 
+        <!-- BEGIN: opciones -->
+        <div class="grid_filters_actions">
+
+
+                <!-- BEGIN: add -->
+                <button class="shortcut" onclick="listarMovimientos()">
+                    <i class="icon-pdf"></i>{lbl_pdf}
+                </button>
+
+                <button class="shortcut" onclick="listarMovimientosXLS()">
+                    <i class="icon-xls"></i>{lbl_pdf}
+                </button>
+                <!-- END: add -->
+
+        </div>
+        <!-- END: opciones -->
     </div>
+
+
+
 
 	<br class="clear">
 

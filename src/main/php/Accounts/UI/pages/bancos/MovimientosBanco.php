@@ -18,6 +18,8 @@ use Rasty\i18n\Locale;
 use Rasty\Menu\menu\model\MenuGroup;
 use Rasty\Menu\menu\model\MenuOption;
 
+use Accounts\Core\criteria\MovimientoCuentaCriteria;
+
 
 /**
  * Página para consultar los movimientos de banco.
@@ -29,7 +31,29 @@ use Rasty\Menu\menu\model\MenuOption;
 class MovimientosBanco extends AccountsPage{
 
 
+    private $movimientoCuentaCriteria;
+
+    /**
+     * @return mixed
+     */
+    public function getMovimientoCuentaCriteria()
+    {
+        return $this->movimientoCuentaCriteria;
+    }
+
+    /**
+     * @param mixed $movimientoCuentaCriteria
+     */
+    public function setMovimientoCuentaCriteria($movimientoCuentaCriteria)
+    {
+        $this->movimientoCuentaCriteria = $movimientoCuentaCriteria;
+    }
+
 	public function __construct(){
+        $movimientoCuentaCriteria = new MovimientoCuentaCriteria();
+
+
+        $this->setMovimientoCuentaCriteria($movimientoCuentaCriteria);
 
 	}
 
@@ -73,7 +97,16 @@ class MovimientosBanco extends AccountsPage{
 		$xtpl->assign("legend_operaciones", $this->localize("grid.operaciones") );
 		$xtpl->assign("legend_resultados", $this->localize("grid.resultados") );
 
-		//$xtpl->assign("agregar_label", $this->localize("cliente.agregar") );
+        $movimientoCuentaFilter = $this->getComponentById("movimientosFilter");
+
+        $movimientoCuentaFilter->fillFromSaved( $this->getMovimientoCuentaCriteria() );
+
+       // $xtpl->assign("lbl_pdf", $this->localize("menu.productos.precios") );
+        $xtpl->assign("linkPdf", $this->getLinkMovimientosPdf() );
+        $xtpl->assign("linkXls", $this->getLinkMovimientosXls() );
+
+        $xtpl->parse("main.opciones.add");
+        $xtpl->parse("main.opciones");
 	}
 
 //	public function getBanco(){
