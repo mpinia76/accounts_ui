@@ -97,9 +97,9 @@ class MovimientosBanco extends AccountsPage{
 		$xtpl->assign("legend_operaciones", $this->localize("grid.operaciones") );
 		$xtpl->assign("legend_resultados", $this->localize("grid.resultados") );
 
-        $movimientoCuentaFilter = $this->getComponentById("movimientosFilter");
+        /*$movimientoCuentaFilter = $this->getComponentById("movimientosFilter");
 
-        $movimientoCuentaFilter->fillFromSaved( $this->getMovimientoCuentaCriteria() );
+        $movimientoCuentaFilter->fillFromSaved( $this->getMovimientoCuentaCriteria() );*/
 
        // $xtpl->assign("lbl_pdf", $this->localize("menu.productos.precios") );
         $xtpl->assign("linkPdf", $this->getLinkMovimientosPdf() );
