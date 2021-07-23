@@ -42,6 +42,7 @@
 	<page name="GastoPagar"   location="pages/gastos/pagar/GastoPagar.page" url="gastos/pagar"/>
 	<page name="GastoAnular"   location="pages/gastos/anular/GastoAnular.page" url="gastos/anular"/>
 
+    <page name="GastosXLS"   location="pages/gastos/GastosXLS.page" url="gastos/gastosxls"/>
 
 	<page name="InformesSemanales"   location="pages/informes/semanal/InformesSemanales.page" url="informes/semanales"/>
 	<page name="InformeSemanalAgregar"   location="pages/informes/semanal/agregar/InformeSemanalAgregar.page" url="informes/semanales/agregar"/>
@@ -130,9 +131,11 @@
     <!-- pdfs -->
 
     <component name="MovimientosPDF"   location="components/pdf/movimiento"/>
+    <component name="GastosPDF"   location="components/pdf/gasto"/>
 
     <!-- xlss -->
     <component name="MovimientosXLS"   location="components/xls/movimiento"/>
+    <component name="GastosXLS"   location="components/xls/gasto"/>
 
 	<!-- layouts -->
 	<component name="AccountsMetroLayout" location="layouts" />

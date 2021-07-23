@@ -336,6 +336,18 @@ abstract class AccountsPage extends RastyPage{
 
     }
 
+    public function getLinkGastosPdf(){
+
+        return LinkBuilder::getPdfUrl( "GastosPDF") ;
+
+    }
+
+    public function getLinkGastosXls(){
+
+        return LinkBuilder::getPageUrl( "GastosXLS") ;
+
+    }
+
 
 
 

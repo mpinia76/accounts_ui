@@ -1,6 +1,19 @@
 <!-- BEGIN: main-->
 <script>
+
+    function listarGastos(  ){
+        $("#input_submit_ajax_Gasto").click();
+        window.open('{linkPdf}','_blank');
+
+    }
+    function listarGastosXLS(  ){
+        $("#input_submit_ajax_Gasto").click();
+        window.location.href='{linkXls}'
+
+
+    }
 </script>
+
 <style>
 </style>
 
@@ -9,6 +22,23 @@
     <div id="gastos_filtros" class="grid_filters_double">
 
         <rasty id="gastosFilter" />
+
+        <!-- BEGIN: opciones -->
+        <div class="grid_filters_actions">
+
+
+            <!-- BEGIN: add -->
+            <button class="shortcut" onclick="listarGastos()">
+                <i class="icon-pdf"></i>{lbl_pdf}
+            </button>
+
+            <button class="shortcut" onclick="listarGastosXLS()">
+                <i class="icon-xls"></i>{lbl_pdf}
+            </button>
+            <!-- END: add -->
+
+        </div>
+        <!-- END: opciones -->
 
     </div>
 

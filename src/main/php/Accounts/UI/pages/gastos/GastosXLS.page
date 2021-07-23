@@ -1,0 +1,12 @@
+<rasty specificationClass="Accounts\UI\pages\gastos\GastosXLS" templateLocation="pages/gastos/GastosXLS.htm">
+
+	<param name="layoutType" value="str:AccountsXLSLayout" />
+
+
+
+
+	 <component id="gastosXLS" type="GastosXLS">
+
+	</component>
+
+</rasty>

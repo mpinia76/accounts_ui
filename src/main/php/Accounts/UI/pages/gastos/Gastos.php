@@ -76,6 +76,12 @@ class Gastos extends AccountsPage{
 		$xtpl->assign("legend_resultados", $this->localize("grid.resultados") );
 
 		$xtpl->assign("agregar_label", $this->localize("gasto.agregar") );
+
+        $xtpl->assign("linkPdf", $this->getLinkGastosPdf() );
+        $xtpl->assign("linkXls", $this->getLinkGastosXls() );
+
+        $xtpl->parse("main.opciones.add");
+        $xtpl->parse("main.opciones");
 	}
 
 }

@@ -1,0 +1,82 @@
+<!-- BEGIN:main -->
+<html>
+
+<head>
+  <style>
+
+    @page {
+  margin-top: 200px !important;
+  margin-bottom: 55px !important;
+  margin-left: 50px !important;
+  margin-right: 50px !important;
+}
+    #header { position: fixed; left: 0px; top: -210px; right: 0px; }
+    #footer { position: fixed; left: 0px; bottom: -5px; right: 0px; height: 2px;  }
+
+    #footer .page:after { content: counter(page);  }
+    #content { page-break-after: auto;}
+    #divPacks { page-break-before: always;}
+    #divCombos { page-break-before: always;}
+  </style>
+  </head>
+<body>
+  <div id="header">
+    <table>
+	<tr>
+	<td width="450px">
+
+		<p style="font-size:22pt;font-weight: bold;">{fecha}</p>
+        <p style="font-size:14pt;font-weight: bold;">Gastos</p>
+        <p style="font-size:14pt;font-weight: bold;">{entreFechas}</p>
+
+	</td>
+
+	</tr>
+
+</table>
+
+  </div>
+  <div id="footer" style="padding-top: 10px; border-top: 1px solid #ddd; font-size:13px; color: #333; margin-top: 20px;">
+
+    <table>
+			<tr>
+			<td width="580px">
+			    Accounts
+			</td>
+
+			<td width="120px" align="right">
+
+				<p class="page">P&aacute;gina </p>
+
+			</td>
+
+			</tr>
+
+		</table>
+  </div>
+  <div id="content">
+  	<hr />
+
+<div class="box_details">
+
+	<!-- BEGIN:gastos -->
+
+	<table cellspacing="0" cellpadding="0" border="1">
+
+		<tr><th>{lbl_fecha}</th><th>{lbl_concepto}</th><th>{lbl_monto}</th><th>{lbl_observaciones}</th><th>{lbl_estado}</th></tr></thead>
+
+			<!-- BEGIN:detalle -->
+			<tr><td >{fechaHora}</td><td>{concepto}</td><td style="text-align: right;">{monto}</td><td>{observaciones}</td><td>{estado}</td></tr>
+			<!-- END:detalle -->
+
+
+	</table>
+
+	<!-- END:gastos -->
+
+</div>
+
+  </div>
+</body>
+</html>
+<!-- END:main -->
