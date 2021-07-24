@@ -64,19 +64,12 @@ function pagar(link){
 		</button>
 		<!-- END:forma_pago_caja -->
 
-		<!-- BEGIN:forma_pago_tarjeta -->
-		<button class="shortcut" onclick="javascript: alert('No disponible');">
-				<img src="{WEB_PATH}/css/images/tarjeta_48.png" />
-				{lbl_tarjeta}
-		</button>
-		<!-- END:forma_pago_tarjeta -->
-
-		<!-- BEGIN:forma_pago_cajaChica -->
-		<button class="shortcut" onclick="javascript: window.location.href='{linkPagarCajaChica}'">
-				<img src="{WEB_PATH}/css/images/cajaChica_48.png" />
-				{lbl_cajaChica}
-		</button>
-		<!-- END:forma_pago_cajaChica -->
+        <!-- BEGIN:forma_pago_bapro -->
+        <button class="shortcut" onclick="javascript: pagar('{linkPagarBAPRO}')">
+            <img src="{WEB_PATH}/css/images/gastos_48.png" />
+            {lbl_bapro}
+        </button>
+        <!-- END:forma_pago_bapro -->
 
 
 
