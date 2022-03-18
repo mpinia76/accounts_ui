@@ -1,6 +1,7 @@
 <?php
 namespace Accounts\UI\service;
 
+use Accounts\UI\components\filter\model\UIBancoCriteria;
 use Accounts\UI\components\filter\model\UIMovimientoCuentaCriteria;
 
 use Rasty\components\RastyPage;
@@ -15,6 +16,8 @@ use Accounts\Core\service\ServiceFactory;
 use Cose\Security\model\User;
 use Rasty\Grid\entitygrid\model\IEntityGridService;
 use Rasty\Grid\filter\model\UICriteria;
+
+use Rasty\utils\Logger;
 
 /**
  *
@@ -105,6 +108,16 @@ class UIMovimientoCuentaService  implements IEntityGridService{
 
 			$criteria = $uiCriteria->buildCoreCriteria() ;
 
+			if (!$criteria->getCuenta()){
+				$bancos = UIServiceFactory::getUIBancoService()->getList( new UIBancoCriteria() );
+				$arrCuentas = array();
+				foreach ($bancos as $banco){
+					//Logger::log("Banco: ".$banco->getOid());
+					$arrCuentas[]=$banco->getOid();
+				}
+				$criteria->setCuentas($arrCuentas);
+			}
+
 			//$criteria->addOrder("fechaHora", "ASC");
 
 			$service = ServiceFactory::getMovimientoCuentaService();
@@ -132,6 +145,15 @@ class UIMovimientoCuentaService  implements IEntityGridService{
 		try{
 
 			$criteria = $uiCriteria->buildCoreCriteria() ;
+			if (!$criteria->getCuenta()){
+				$bancos = UIServiceFactory::getUIBancoService()->getList( new UIBancoCriteria() );
+				$arrCuentas = array();
+				foreach ($bancos as $banco){
+					//Logger::log("Banco: ".$banco->getOid());
+					$arrCuentas[]=$banco->getOid();
+				}
+				$criteria->setCuentas($arrCuentas);
+			}
 
 			//$criteria->addOrder("fechaHora", "ASC");
 

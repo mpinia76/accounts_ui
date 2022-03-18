@@ -28,6 +28,24 @@ class UIMovimientoCuentaCriteria extends UIAccountsCriteria{
 
 	private $cuenta;
 
+    private $cuentas;
+
+    /**
+     * @return mixed
+     */
+    public function getCuentas()
+    {
+        return $this->cuentas;
+    }
+
+    /**
+     * @param mixed $cuentas
+     */
+    public function setCuentas($cuentas)
+    {
+        $this->cuentas = $cuentas;
+    }
+
 	public function __construct(){
 
 		parent::__construct();
@@ -51,6 +69,7 @@ class UIMovimientoCuentaCriteria extends UIAccountsCriteria{
 		$criteria->setFechaDesde( $this->getFechaDesde() );
 		$criteria->setFechaHasta( $this->getFechaHasta() );
 		$criteria->setCuenta( $this->getCuenta() );
+        $criteria->setCuentas( $this->getCuentas() );
 
 		return $criteria;
 	}
