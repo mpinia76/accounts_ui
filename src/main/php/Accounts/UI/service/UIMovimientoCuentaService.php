@@ -98,5 +98,62 @@ class UIMovimientoCuentaService  implements IEntityGridService{
 
 		return $this->getList($uiCriteria);
 	}
+
+	public function getTotalesHaber( UIMovimientoCuentaCriteria $uiCriteria){
+
+		try{
+
+			$criteria = $uiCriteria->buildCoreCriteria() ;
+
+			//$criteria->addOrder("fechaHora", "ASC");
+
+			$service = ServiceFactory::getMovimientoCuentaService();
+
+			$movimetos = $service->getList( $criteria );
+
+			$saldo = 0;
+			foreach ($movimetos as $movimeto) {
+
+				//if($movimeto->podesAnularte()){
+				$saldo += $movimeto->getHaber();
+				//}
+			}
+			return $saldo;
+
+
+		} catch (Exception $e) {
+
+			throw new RastyException($e->getMessage());
+
+		}
+	}
+	public function getTotalesDebe( UIMovimientoCuentaCriteria $uiCriteria){
+
+		try{
+
+			$criteria = $uiCriteria->buildCoreCriteria() ;
+
+			//$criteria->addOrder("fechaHora", "ASC");
+
+			$service = ServiceFactory::getMovimientoCuentaService();
+
+			$movimetos = $service->getList( $criteria );
+
+			$saldo = 0;
+			foreach ($movimetos as $movimeto) {
+
+				//if($movimeto->podesAnularte()){
+				$saldo += $movimeto->getDebe();
+				//}
+			}
+			return $saldo;
+
+
+		} catch (Exception $e) {
+
+			throw new RastyException($e->getMessage());
+
+		}
+	}
 }
 ?>

@@ -1,10 +1,12 @@
 <rasty specificationClass="Accounts\UI\pages\balances\BalanceDia" templateLocation="pages/balances/BalanceDia.htm">
 
 	<param name="layoutType" value="str:AccountsMetroLayout" />
-	<param name="strFecha" value="get:fecha" />
+	<component id="balanceFilter" type="BalanceDiaFilter">
 
-	<component id="balance" type="BalanceDia">
-		<param name="fecha" value="fecha" />
-	</component>
+    		<param name="uicriteriaClazz" value="uicriteriaClazz" />
+    		<param name="legend" value="msg:balanceDia.buscar" />
+    		<param name="legendAgain" value="msg:balance.buscar.again" />
+    		<param name="resultDiv" value="str:searchdiv" />
+    	</component>
 
 </rasty>

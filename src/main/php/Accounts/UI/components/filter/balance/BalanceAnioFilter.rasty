@@ -1,0 +1,22 @@
+<rasty specificationClass="Accounts\UI\components\filter\balance\BalanceAnioFilter" templateLocation="BalanceAnioFilter.htm">
+
+	<component id="fecha" type="InputDate">
+    		<param name="inputId" value="str:fecha" />
+    		<param name="name" value="str:fecha" />
+    		<param name="value" value="fecha" />
+    		<param name="placeholder" value="msg:balanceDia.fecha" />
+    		<param name="format" value="str:d/m/Y H:i" />
+
+    	</component>
+
+    	<component id="cuenta" type="InputCombo">
+            		<param name="inputId" value="str:cuenta" />
+            		<param name="name" value="str:cuenta" />
+            		<param name="value" value="criteria.cuenta" />
+            		<param name="options" value="bancos" />
+            		<param name="finder" value="bancoFinderClazz" />
+            		<param name="emptyOptionLabel" value="msg:criteria.sin_especificar" />
+
+            	</component>
+
+</rasty>

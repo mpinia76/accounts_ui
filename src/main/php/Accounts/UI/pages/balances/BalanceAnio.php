@@ -1,6 +1,7 @@
 <?php
 namespace Accounts\UI\pages\balances;
 
+use Accounts\UI\components\filter\model\UIMovimientoCuentaCriteria;
 use Accounts\UI\pages\AccountsPage;
 
 use Accounts\UI\service\UIServiceFactory;
@@ -19,28 +20,27 @@ use Rasty\Grid\filter\model\UICriteria;
 use Rasty\Menu\menu\model\MenuGroup;
 use Rasty\Menu\menu\model\MenuOption;
 
+use Accounts\Core\criteria\MovimientoCuentaCriteria;
+
 class BalanceAnio extends AccountsPage{
 
-	private $fecha;
+
 
 	public function __construct(){
 
 
-		$this->fecha = new \DateTime();
+		//$this->fecha = new \DateTime();
 
 	}
 
-	protected function parseLabels(XTemplate $xtpl){
-
-		$xtpl->assign("legend",  $this->localize( "balanceAnio.legend" ) );
-
-
+	public function getUicriteriaClazz(){
+		return get_class( new UIMovimientoCuentaCriteria() );
 	}
 
 	protected function parseXTemplate(XTemplate $xtpl){
 
-		/*labels*/
-		$this->parseLabels($xtpl);
+		$xtpl->assign("legend_operaciones", $this->localize("grid.operaciones") );
+		$xtpl->assign("legend_resultados", $this->localize("grid.resultados") );
 
 
 	}
@@ -56,22 +56,7 @@ class BalanceAnio extends AccountsPage{
 	}
 
 
-	public function getFecha()
-	{
-	    return $this->fecha;
-	}
 
-	public function setFecha($fecha)
-	{
-	    $this->fecha = $fecha;
-	}
-
-		public function setStrFecha($strFecha){
-		if( !empty($strFecha) ){
-			$fecha = AccountsUIUtils::newDateTime($strFecha) ;
-			$this->setFecha($fecha);
-		}
-	}
 
 }
 ?>

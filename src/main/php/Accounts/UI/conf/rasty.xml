@@ -88,7 +88,17 @@
 	<component name="InformeSemanalPorSemana" location="components/stats/informes" />
 
 
+	<component name="CajaBox"   location="components/boxes/caja"/>
+	<component name="GastoBox"   location="components/boxes/gasto"/>
+	<component name="BancoBox"   location="components/boxes/banco"/>
+	<component name="PagoBox"   location="components/boxes/pago"/>
+
 	<component name="GastosAnio" location="components/stats/gastos" />
+
+	<component name="BalanceDia"   location="components/stats/balance"/>
+
+	<component name="BalanceMes"   location="components/stats/balance"/>
+	<component name="BalanceAnio"   location="components/stats/balance"/>
 
 	<!-- forms -->
     <component name="ProfileForm"   location="components/form/usuario"/>
@@ -118,15 +128,13 @@
 	<component name="MovimientoBancoFilter"   location="components/filter/movimiento"/>
 	<component name="PagoFilter"   location="components/filter/pago"/>
 
-	<component name="CajaBox"   location="components/boxes/caja"/>
-	<component name="GastoBox"   location="components/boxes/gasto"/>
-	<component name="BancoBox"   location="components/boxes/banco"/>
-	<component name="PagoBox"   location="components/boxes/pago"/>
+	<component name="BalanceDiaFilter"   location="components/filter/balance"/>
+	<component name="BalanceMesFilter"   location="components/filter/balance"/>
+	<component name="BalanceAnioFilter"   location="components/filter/balance"/>
 
-	<component name="BalanceDia"   location="components/stats/balance"/>
-	<component name="BalanceCajas"   location="components/stats/balance"/>
-	<component name="BalanceMes"   location="components/stats/balance"/>
-	<component name="BalanceAnio"   location="components/stats/balance"/>
+
+
+
 
     <!-- pdfs -->
 

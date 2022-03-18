@@ -98,6 +98,7 @@ class HeaderNav extends RastyComponent{
 		}elseif (AccountsUIUtils::isAdminSiteLogged()){
 			$menuGroups[] =  $this->getMenuAdmin() ;
 			$menuGroups[] =  $this->getMenuCuentas() ;
+            $menuGroups[] =  $this->getMenuBalances() ;
 		}
 
 
@@ -562,6 +563,77 @@ class HeaderNav extends RastyComponent{
 		$submenu->setIconClass("icon-empleados");
 		return $submenu;
 	}
+
+    public function getMenuBalances(){
+
+        $menuGroup = new MenuGroup();
+        $menuGroup->setLabel( $this->localize( "menu.estadisticas") );
+
+
+
+        $menuOption = new MenuOption();
+        $menuOption->setLabel( $this->localize( "menu.balances") );
+        $menuOption->setPageName( "BalanceDia" );
+        $menuOption->setIconClass("charts");
+        $menuGroup->addMenuOption( $menuOption );
+
+        $selected=0;
+        if (strpos($this->getUri(), 'balances')){
+            $selected=1;
+        }
+        $menuOption->setSelected( $selected);
+        $submenuOption = new MenuOption();
+        $submenuOption->setLabel( $this->localize( "menu.balances.dia") );
+        $submenuOption->setPageName("BalanceDia");
+        $selected=0;
+        if (strpos($this->getUri(), 'dia.html')){
+            $selected=1;
+        }
+        $submenuOption->setSelected( $selected);
+
+
+        $menuOption->addSubMenuOption($submenuOption);
+
+
+        $submenuOption = new MenuOption();
+        $submenuOption->setLabel( $this->localize( "menu.balances.mes") );
+        $submenuOption->setPageName("BalanceMes");
+
+        $selected=0;
+        if (strpos($this->getUri(), 'mes.html')){
+            $selected=1;
+        }
+
+        $submenuOption->setSelected( $selected);
+
+
+        $menuOption->addSubMenuOption($submenuOption);
+
+        $submenuOption = new MenuOption();
+        $submenuOption->setLabel( $this->localize( "menu.balances.anio") );
+        $submenuOption->setPageName("BalanceAnio");
+
+        $selected=0;
+        if (strpos($this->getUri(), 'anio.html')){
+            $selected=1;
+        }
+
+        $submenuOption->setSelected( $selected);
+
+
+        $menuOption->addSubMenuOption($submenuOption);
+
+
+
+
+
+        //$menuGroup->addMenuOption( $menuOption );
+
+
+        $submenu = new SubmenuOption($menuGroup);
+        $submenu->setIconClass("icon-empleados");
+        return $submenu;
+    }
 
 
 

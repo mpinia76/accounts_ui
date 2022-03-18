@@ -105,6 +105,8 @@
 	"menu.transferir":"Transferir",
 
 
+    "menu.estadisticas":"Estadísticas",
+    "menu.balances":"Balances",
 
 	"menu.logout":"Salir del sistema",
 
@@ -676,11 +678,16 @@
 
 	"balanceCajas.legend": "Balance de Cajas del día",
 	"balanceDia.detalle_ventas.legend": "Detalle de ventas x Categoría",
- 	"balanceDia.title":"Balancia Cajas del día",
+ 	"balanceDia.title":"Balance del día",
  	"balanceDia.pagos":"Pagos",
  	"balanceDia.ventas":"Ventas",
  	"balanceDia.gastos":"Gastos",
  	"balanceDia.fecha":"Fecha",
+ 	"balanceDia.buscar":"Buscar",
+ 	"balanceDia.cuenta":"Cuenta",
+    "balanceDia.haber":"Entradas",
+    "balanceDia.debe":"Gastos",
+    "balanceDia.total":"Total",
 
   	"grid.operaciones": "Operaciones",
    	"grid.resultados": "Resultados de la búsqueda",

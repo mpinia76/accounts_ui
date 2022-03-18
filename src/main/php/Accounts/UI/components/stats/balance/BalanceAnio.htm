@@ -1,0 +1,65 @@
+<!-- BEGIN:main -->
+<style>
+.buttons button{
+
+	margin: 10px;
+}
+
+td.saldo{
+
+	text-align: right;
+}
+</style>
+<div class="box">
+
+	<div class="item">
+		<h2>{lbl_anio}</h2>
+		<p>{anio}</p>
+	</div>
+	<div class="item">
+		<h2>{lbl_haber}</h2>
+		<p>{haber}</p>
+	</div>
+	<div class="item">
+		<h2>{lbl_debe}</h2>
+		<p>{debe}</p>
+	</div>
+	<div class="item">
+		<h2>{lbl_total}</h2>
+		<p>{total}</p>
+	</div>
+</div>
+
+<!-- BEGIN: detalle_mes -->
+<div class="box">
+	<fieldset>
+		<legend>{detalle_mes_legend}</legend>
+
+		<table>
+			<tr>
+				<th>{lbl_mes}</th>
+				<th>{lbl_haber}</th>
+
+				<th>{lbl_debe}</th>
+				<th>{lbl_total}</th>
+
+			</tr>
+			<!-- BEGIN: mes -->
+			<tr>
+				<td>{mes}</td>
+				<td class='saldo'>{habermes}</td>
+				<!--<td class='saldo'>{pagos}</td>
+
+				-->
+				<td class='saldo'>{debemes}</td>
+				<td class='saldo'>{totalmes}</td>
+
+			</tr>
+			<!-- END: mes -->
+		</table>
+
+	</fieldset>
+</div>
+<!-- END: detalle_mes -->
+
+<!-- END:main -->
