@@ -294,23 +294,7 @@ abstract class AccountsPage extends RastyPage{
 
 
 
-    public function getLinkBancoAgregar(){
 
-        return LinkBuilder::getPageUrl( "BancoAgregar") ;
-
-    }
-
-    public function getLinkActionAgregarBanco(){
-
-        return LinkBuilder::getActionUrl( "AgregarBanco") ;
-
-    }
-
-    public function getLinkActionModificarBanco(){
-
-        return LinkBuilder::getActionUrl( "ModificarBanco") ;
-
-    }
 
     public function getLinkActionAsignarUsuariosSite(){
 
