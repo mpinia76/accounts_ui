@@ -122,13 +122,26 @@ class UIMovimientoCuentaService  implements IEntityGridService{
 
 			$service = ServiceFactory::getMovimientoCuentaService();
 
-			$movimetos = $service->getList( $criteria );
+			$movimientos = $service->getList( $criteria );
 
 			$saldo = 0;
-			foreach ($movimetos as $movimeto) {
+			foreach ($movimientos as $movimiento) {
+				/*if($movimiento->getHaber()){
+					Logger::log("Entrada: ".$movimiento->getDescripcion()." - ".$movimiento->getHaber());
 
-				//if($movimeto->podesAnularte()){
-				$saldo += $movimeto->getHaber();
+
+				}*/
+
+				//if($movimiento->podesAnularte()){
+				//Logger::log("Clase: ".get_class($movimiento));
+				if (get_class($movimiento)=='Accounts\Core\model\MovimientoTransferencia') {
+					if (!$movimiento->getTransferencia()->getOrigen()) {//o sea no es una transferencia entre mis cuentas
+						$saldo += $movimiento->getHaber();
+					}
+				}
+				else{
+					$saldo += $movimiento->getHaber();
+				}
 				//}
 			}
 			return $saldo;
@@ -159,13 +172,22 @@ class UIMovimientoCuentaService  implements IEntityGridService{
 
 			$service = ServiceFactory::getMovimientoCuentaService();
 
-			$movimetos = $service->getList( $criteria );
+			$movimientos = $service->getList( $criteria );
 
 			$saldo = 0;
-			foreach ($movimetos as $movimeto) {
-
-				//if($movimeto->podesAnularte()){
-				$saldo += $movimeto->getDebe();
+			foreach ($movimientos as $movimiento) {
+				/*if($movimiento->getDebe()){
+					Logger::log("Gasto: ".$movimiento->getDescripcion()." - ".$movimiento->getDebe());
+				}*/
+				//if($movimiento->podesAnularte()){
+				if (get_class($movimiento)=='Accounts\Core\model\MovimientoTransferencia') {
+					if (!$movimiento->getTransferencia()->getOrigen()) {//o sea no es una transferencia entre mis cuentas
+						$saldo += $movimiento->getDebe();
+					}
+				}
+				else{
+					$saldo += $movimiento->getDebe();
+				}
 				//}
 			}
 			return $saldo;
